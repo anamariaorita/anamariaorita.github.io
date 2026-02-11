@@ -788,34 +788,20 @@ body.light-theme {
   margin-bottom: 1.5rem;
 }
 
-/* ================= CONTACT CARDS INLINE ================= */
-
-/* Pe desktop: cardurile în linie */
-@media screen and (min-width: 630px) {
-  .contact__info {
-    display: flex !important;       /* folosește flex în loc de grid */
-    gap: 2rem;                      /* spațiu între carduri */
-    flex-wrap: wrap;                /* dacă ecranul e mai mic, se mută pe rând */
-    justify-content: center;        /* centru pe orizontală */
-  }
-
-  .contact__card {
-    flex: 1 1 200px;                /* minim 200px, se poate extinde */
-    max-width: 300px;               /* nu devine prea lat */
-    text-align: center;
-  }
+/* ================= CONTACT CARDS INLINE RESPONSIVE ================= */
+.contact__info {
+  display: flex;
+  flex-wrap: wrap;          /* dacă nu încape, cardurile se mută pe rând */
+  gap: 2rem;                /* spațiu între carduri */
+  justify-content: center;  /* centru pe orizontală */
 }
 
+.contact__card {
+  flex: 1 1 250px;          /* minim 250px, se poate extinde */
+  max-width: 300px;         /* nu devine prea lat */
+  text-align: center;
+}
 /* Pe mobil: cardurile pe verticală */
-@media screen and (max-width: 629px) {
-  .contact__info {
-    display: flex;
-    flex-direction: column;         /* stau unul sub altul */
-    gap: 1rem;
-    justify-content: center;
-    align-items: center;
-  }
-}
 
 
 .contact__card-icon {
@@ -1098,73 +1084,6 @@ body.light-theme {
     margin: auto;
   }
 
-  .contact__container {
-    display: grid;
-    grid-template-columns: 220px 340px;
-    column-gap: 2rem;
-    justify-content: center;
-  }
-
-  /* ================= CONTACT CARDS INLINE ================= */
-
-/* Pe desktop: cardurile în linie */
-@media screen and (min-width: 630px) {
-  .contact__info {
-    display: flex !important;       /* folosește flex în loc de grid */
-    gap: 2rem;                      /* spațiu între carduri */
-    flex-wrap: wrap;                /* dacă ecranul e mai mic, se mută pe rând */
-    justify-content: center;        /* centru pe orizontală */
-  }
-
-  .contact__card {
-    flex: 1 1 200px;                /* minim 200px, se poate extinde */
-    max-width: 300px;               /* nu devine prea lat */
-    text-align: center;
-  }
-}
-
-/* Pe mobil: cardurile pe verticală */
-@media screen and (max-width: 629px) {
-  .contact__info {
-    display: flex;
-    flex-direction: column;         /* stau unul sub altul */
-    gap: 1rem;
-    justify-content: center;
-    align-items: center;
-  }
-}
-  /* .contact__info {
-    grid-template-columns: 350px;
-    justify-content: center;
-  }
-
-  .contact__form {
-    width: 360px;
-    margin: 0 auto;
-  } */
-}
-
-/* @media screen and (min-width: 767px) {
-  /* .work__container {
-    grid-template-columns: repeat(2, max-content);
-  } */
-
-/* .contact__info {
-    grid-template-columns: 300px;
-  }
-
-  .contact__container {
-    grid-template-columns: repeat(2, 325px);
-    justify-content: center;
-  }
-} */
-
-/* For large devices */
-@media screen and (min-width: 992px) {
-  .container {
-    margin-left: auto;
-    margin-right: auto;
-  }
 
   .section {
     padding: 6.5rem 0 1rem;
