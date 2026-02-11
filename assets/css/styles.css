@@ -788,17 +788,35 @@ body.light-theme {
   margin-bottom: 1.5rem;
 }
 
-.contact__info {
-  display: grid;
-  gap: 1rem;
+/* ================= CONTACT CARDS INLINE ================= */
+
+/* Pe desktop: cardurile în linie */
+@media screen and (min-width: 630px) {
+  .contact__info {
+    display: flex !important;       /* folosește flex în loc de grid */
+    gap: 2rem;                      /* spațiu între carduri */
+    flex-wrap: wrap;                /* dacă ecranul e mai mic, se mută pe rând */
+    justify-content: center;        /* centru pe orizontală */
+  }
+
+  .contact__card {
+    flex: 1 1 200px;                /* minim 200px, se poate extinde */
+    max-width: 300px;               /* nu devine prea lat */
+    text-align: center;
+  }
 }
 
-.contact__card {
-  background-color: var(--container-color);
-  padding: 2rem 1rem;
-  border-radius: 0.75rem;
-  text-align: center;
+/* Pe mobil: cardurile pe verticală */
+@media screen and (max-width: 629px) {
+  .contact__info {
+    display: flex;
+    flex-direction: column;         /* stau unul sub altul */
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
 }
+
 
 .contact__card-icon {
   font-size: 2rem;
