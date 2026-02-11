@@ -1233,11 +1233,19 @@ body.light-theme {
     padding: 1.5rem 2rem;
   }
 
-  .contact__info {
-    grid-template-columns: 430px;
-    gap: 1rem;
-  }
+  /* ================= CONTACT CARDS INLINE ================= */
+.contact__info {
+  display: flex !important;    /* forțăm să fie flex */
+  gap: 2rem;                   /* spațiu între carduri */
+  flex-wrap: wrap;             /* să se ducă pe rând dacă ecranul e prea mic */
+  justify-content: center;     /* centru pe orizontală */
+}
 
+.contact__card {
+  flex: 1 1 200px;             /* fiecare card ocupă minim 200px și se poate extinde */
+  max-width: 300px;            /* nu devine prea lat */
+  text-align: center;
+}
   .contact__form {
     width: 430px;
   }
@@ -1265,16 +1273,6 @@ body.light-theme {
 #talks a:hover {
   color: var(--first-color-alt); /* nuanță mai deschisă la hover */
 }
-  .contact__info {
-  display: flex;           /* schimbăm grid în flex */
-  gap: 2rem;               /* spațiu între carduri */
-  flex-wrap: wrap;         /* să meargă pe rânduri dacă e prea mic ecranul */
-  justify-content: center; /* centru pe orizontală */
-} 
-  .contact__card {
-  flex: 1 1 300px;  /* crește până la 300px, dar se micșorează dacă e nevoie */
-  max-width: 350px; /* nu devine prea mare */
-  text-align: center;
-}
+ 
 
 }
