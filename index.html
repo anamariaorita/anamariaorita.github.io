@@ -14,42 +14,105 @@
 <title>Ana-Maria Orita | PhD Student</title>
 
 <style>
-/* ===== Light / Dark Theme ===== */
+/* ===== Base Styles ===== */
 body {
-    background-color: #ffffff; /* Light Mode implicit */
-    color: #111111;
     font-family: Arial, sans-serif;
+    background-color: #ffffff; /* Light Mode */
+    color: #111111;
+    transition: all 0.4s ease;
+}
+
+.header {
+    background-color: #ffffff;
+    transition: all 0.4s ease;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.nav__link i {
+    color: #111111;
     transition: all 0.3s ease;
 }
 
 .section {
     background-color: #f7f7f7;
+    padding: 3rem 0;
+    transition: all 0.4s ease;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+/* Boxes and Cards */
+.about__box, .skills__box div, .work__card, .services__card, .contact__card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    transition: all 0.4s ease;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+/* Buttons */
+.button, .theme-button {
+    cursor: pointer;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    background-color: #4db5ff;
+    color: #ffffff;
+}
+.button:hover, .theme-button:hover {
+    opacity: 0.9;
+}
+
+/* Social Icons */
+.home__social-link i {
+    color: #111111;
+    font-size: 1.5rem;
     transition: all 0.3s ease;
 }
 
+/* ===== Dark Theme ===== */
 body.dark-theme {
     background-color: #111111;
     color: #ffffff;
 }
 
+body.dark-theme .header {
+    background-color: #1a1a1a;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+body.dark-theme .nav__link i {
+    color: #ffffff;
+}
+
 body.dark-theme .section {
     background-color: #1a1a1a;
+    box-shadow: 0 4px 15px rgba(255,255,255,0.05);
 }
 
-/* Buton toggle */
-.theme-button {
-    cursor: pointer;
+body.dark-theme .about__box, 
+body.dark-theme .skills__box div, 
+body.dark-theme .work__card, 
+body.dark-theme .services__card, 
+body.dark-theme .contact__card {
+    background-color: #222222;
+    color: #ffffff;
+    box-shadow: 0 2px 10px rgba(255,255,255,0.05);
+}
+
+body.dark-theme .button, 
+body.dark-theme .theme-button {
     background-color: #4db5ff;
-    border: none;
-    padding: 0.5rem 1rem;
-    color: white;
-    border-radius: 5px;
-    font-size: 0.9rem;
-    transition: all 0.3s ease;
+    color: #111111;
 }
 
-.theme-button:hover {
-    opacity: 0.9;
+body.dark-theme .home__social-link i {
+    color: #ffffff;
 }
 </style>
 </head>
@@ -236,7 +299,6 @@ body.dark-theme .section {
     </span>
 </footer>
 
-<!--=============== JS Luminozitate ===============-->
 <script>
 const themeButton = document.getElementById('theme-toggle');
 themeButton.addEventListener('click', () => {
