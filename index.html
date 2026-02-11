@@ -19,10 +19,11 @@
 <!--=============== HEADER ===============-->
 <header class="header" id="header">
     <nav class="nav container">
-        <a href="#about" class="nav__logo">Ana-Maria Orita</a>
+        <a href="#home" class="nav__logo">Ana-Maria Orita</a>
 
         <div class="nav__menu">
             <ul class="nav__list">
+                <li class="nav__item"><a href="#home" class="nav__link"><i class='bx bx-home'></i></a></li>
                 <li class="nav__item"><a href="#about" class="nav__link"><i class='bx bx-user'></i></a></li>
                 <li class="nav__item"><a href="#research" class="nav__link"><i class='bx bx-book'></i></a></li>
                 <li class="nav__item"><a href="#publications" class="nav__link"><i class='bx bx-file'></i></a></li>
@@ -36,14 +37,49 @@
 <!--=============== MAIN ===============-->
 <main class="main">
 
+<!--=============== HOME ===============-->
+<section class="home section" id="home">
+    <div class="home__container container grid">
+
+        <div class="home__data">
+            <h1 class="home__name">Ana-Maria Orita</h1>
+            <h3 class="home__education">PhD Student, Applied Mathematics</h3>
+            <p class="home__description">
+                Research: Numerical Analysis, Controllability of PDEs, High-order Finite Difference Schemes, Spectral Analysis
+            </p>
+
+            <div class="home__button">
+                <a href="assets/pdf/CV_AnaMariaOrita.pdf" class="button button--ghost" download>
+                    Download Academic CV
+                </a>
+                <a href="#about" class="button">About Me</a>
+            </div>
+        </div>
+
+        <div class="home__handle">
+            <img src="assets/img/perfil.png" alt="Ana-Maria Orita" class="home__img">
+        </div>
+
+        <div class="home__social">
+            <a href="https://www.linkedin.com/in/ana-maria-orita" target="_blank" class="home__social-link">
+                <i class='bx bxl-linkedin'></i>
+            </a>
+            <a href="https://hal.science/" target="_blank" class="home__social-link">
+                <i class='bx bx-book-open'></i>
+            </a>
+        </div>
+    </div>
+</section>
+
 <!--=============== ABOUT ===============-->
 <section class="about section" id="about">
     <span class="section__subtitle">Profile</span>
     <h2 class="section__title">About Me</h2>
 
     <div class="about__container container grid">
-        <div class="about__data">
+        <img src="assets/img/about.jpg" alt="Ana-Maria Orita" class="about__img">
 
+        <div class="about__data">
             <div class="about__info">
                 <div class="about__box">
                     <i class='bx bx-building about__icon'></i>
@@ -66,15 +102,9 @@
 
             <p class="about__description">
                 I am a PhD student at Université Clermont Auvergne (LMBP), focusing on numerical analysis and
-                controllability of second-order partial differential equations, including wave and Euler–Bernoulli beam equations.
+                controllability of second-order PDEs, including wave and Euler–Bernoulli beam equations.
                 My research emphasizes high-order finite difference schemes and spectral analysis of discretized operators.
             </p>
-
-            <div class="about__button">
-                <a href="assets/pdf/CV_AnaMariaOrita.pdf" class="button button--ghost" download>
-                    Download Academic CV
-                </a>
-            </div>
         </div>
     </div>
 </section>
@@ -88,16 +118,18 @@
 
         <div class="skills__content">
             <h3 class="skills__title">Research Topics</h3>
+
             <div class="skills__box">
                 <div class="skills__data"><i class='bx bxs-badge-check'></i><h3 class="skills__name">Controllability & Observability of PDEs</h3></div>
                 <div class="skills__data"><i class='bx bxs-badge-check'></i><h3 class="skills__name">Wave & Beam Equations</h3></div>
                 <div class="skills__data"><i class='bx bxs-badge-check'></i><h3 class="skills__name">Spectral Analysis of Discretized Operators</h3></div>
-                <div class="skills__data"><i class='bx bxs-badge-check'></i><h3 class="skills__name">High-order Finite Difference Schemes</h3></div>
+                <div class="skills__data"><i class='bx bxs-badge-check'></i><h3 class="skills__name">High-order Finite Difference Schehmes</h3></div>
             </div>
         </div>
 
         <div class="skills__content">
             <h3 class="skills__title">Computational Tools</h3>
+
             <div class="skills__box">
                 <div class="skills__data"><i class='bx bxs-badge-check'></i><h3 class="skills__name">Python, Julia</h3></div>
                 <div class="skills__data"><i class='bx bxs-badge-check'></i><h3 class="skills__name">FreeFem++</h3></div>
