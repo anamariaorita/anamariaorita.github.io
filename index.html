@@ -4,37 +4,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ana-Maria Oriță | PhD in Applied Mathematics</title>
     
-    <!--=============== ICONS ===============-->
-    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <!--=============== FAVICONS ===============-->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicons/site.webmanifest">
+    <link rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="assets/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="assets/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#a789d4">
 
-    <!--=============== CSS ===============-->
+    <!--=============== ICONS ===============-->
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+
+    <!--=============== SWIPER FOR CAROUSELS (optional for publications/projects) ===============-->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+    <!--=============== GOOGLE FONTS ===============-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
+    <!--=============== MAIN CSS ===============-->
     <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!--=============== META FOR SEO ===============-->
+    <meta name="description" content="Ana-Maria Oriță - PhD student in Applied Mathematics. Research on numerical analysis, PDEs, and controllability.">
+    <meta name="author" content="Ana-Maria Oriță">
+    <meta name="keywords" content="PhD, Applied Mathematics, PDE, Numerical Analysis, Controllability, Research">
 
     <title>Ana-Maria Orita | PhD Student</title>
 </head>
 
 <body>
+    <!--=============== HEADER ===============-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <!-- Logo / Name -->
+            <a href="#home" class="nav__logo">Ana-Maria Oriță</a>
 
-<!--=============== HEADER ===============-->
-<header class="header" id="header">
-    <nav class="nav container">
-        <a href="#about" class="nav__logo">Ana-Maria Orita</a>
+            <!-- Navigation Menu -->
+            <div class="nav__menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link">
+                            <i class='bx bx-home'></i> Home
+                        </a>
+                    </li>
 
-        <div class="nav__menu">
-            <ul class="nav__list">
-                <li class="nav__item"><a href="#about" class="nav__link"><i class='bx bx-user'></i></a></li>
-                <li class="nav__item"><a href="#research" class="nav__link"><i class='bx bx-book'></i></a></li>
-                <li class="nav__item"><a href="#publications" class="nav__link"><i class='bx bx-file'></i></a></li>
-                <li class="nav__item"><a href="#talks" class="nav__link"><i class='bx bx-microphone'></i></a></li>
-                <li class="nav__item"><a href="#contact" class="nav__link"><i class='bx bx-message-square-dots'></i></a></li>
-            </ul>
-        </div>
-    </nav>
-</header>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">
+                            <i class='bx bx-user'></i> About
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#research" class="nav__link">
+                            <i class='bx bx-book'></i> Research
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#publications" class="nav__link">
+                            <i class='bx bx-briefcase-alt-2'></i> Publications
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link">
+                            <i class='bx bx-message-square-dots'></i> Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Theme toggle (dark/light mode) -->
+            <i class='bx bx-moon change-theme change-theme-button' id="theme-button"></i>
+        </nav>
+    </header>
 
 <!--=============== MAIN ===============-->
 <main class="main">
+
+<!--=============== HOME ===============-->
+<section class="home section" id="home">
+    <div class="home__container container grid">
+
+        <div class="home__data">
+            <h1 class="home__name">Ana-Maria Orita</h1>
+            <h3 class="home__education">PhD Student, Applied Mathematics</h3>
+            <p class="home__description">
+                Research: Numerical Analysis, Controllability of PDEs, High-order Finite Difference Schemes, Spectral Analysis
+            </p>
+
+            <div class="home__button">
+                <a href="assets/pdf/CV_AnaMariaOrita.pdf" class="button button--ghost" download>
+                    Download Academic CV
+                </a>
+                <a href="#about" class="button">About Me</a>
+            </div>
+        </div>
+
+        <div class="home__handle">
+            <img src="assets/img/perfil.png" alt="Ana-Maria Orita" class="home__img">
+        </div>
+
+        <div class="home__social">
+            <a href="https://www.linkedin.com/in/ana-maria-orita" target="_blank" class="home__social-link">
+                <i class='bx bxl-linkedin'></i>
+            </a>
+            <a href="https://hal.science/" target="_blank" class="home__social-link">
+                <i class='bx bx-book-open'></i>
+            </a>
+        </div>
+    </div>
+</section>
 
 <!--=============== ABOUT ===============-->
 <section class="about section" id="about">
@@ -42,8 +127,9 @@
     <h2 class="section__title">About Me</h2>
 
     <div class="about__container container grid">
-        <div class="about__data">
+        <img src="assets/img/about.jpg" alt="Ana-Maria Orita" class="about__img">
 
+        <div class="about__data">
             <div class="about__info">
                 <div class="about__box">
                     <i class='bx bx-building about__icon'></i>
@@ -66,15 +152,9 @@
 
             <p class="about__description">
                 I am a PhD student at Université Clermont Auvergne (LMBP), focusing on numerical analysis and
-                controllability of second-order partial differential equations, including wave and Euler–Bernoulli beam equations.
+                controllability of second-order PDEs, including wave and Euler–Bernoulli beam equations.
                 My research emphasizes high-order finite difference schemes and spectral analysis of discretized operators.
             </p>
-
-            <div class="about__button">
-                <a href="assets/pdf/CV_AnaMariaOrita.pdf" class="button button--ghost" download>
-                    Download Academic CV
-                </a>
-            </div>
         </div>
     </div>
 </section>
@@ -88,16 +168,18 @@
 
         <div class="skills__content">
             <h3 class="skills__title">Research Topics</h3>
+
             <div class="skills__box">
                 <div class="skills__data"><i class='bx bxs-badge-check'></i><h3 class="skills__name">Controllability & Observability of PDEs</h3></div>
                 <div class="skills__data"><i class='bx bxs-badge-check'></i><h3 class="skills__name">Wave & Beam Equations</h3></div>
                 <div class="skills__data"><i class='bx bxs-badge-check'></i><h3 class="skills__name">Spectral Analysis of Discretized Operators</h3></div>
-                <div class="skills__data"><i class='bx bxs-badge-check'></i><h3 class="skills__name">High-order Finite Difference Schemes</h3></div>
+                <div class="skills__data"><i class='bx bxs-badge-check'></i><h3 class="skills__name">High-order Finite Difference Schehmes</h3></div>
             </div>
         </div>
 
         <div class="skills__content">
             <h3 class="skills__title">Computational Tools</h3>
+
             <div class="skills__box">
                 <div class="skills__data"><i class='bx bxs-badge-check'></i><h3 class="skills__name">Python, Julia</h3></div>
                 <div class="skills__data"><i class='bx bxs-badge-check'></i><h3 class="skills__name">FreeFem++</h3></div>
@@ -162,31 +244,99 @@
 
 <!--=============== CONTACT ===============-->
 <section class="contact section" id="contact">
-    <span class="section__subtitle">Contact</span>
-    <h2 class="section__title">Get in Touch</h2>
+    <span class="section__subtitle">Get in Touch</span>
+    <h3 class="section__title">Contact Me</h3>
 
     <div class="contact__container container grid">
+        <!-- Contact Info -->
         <div class="contact__content">
-            <div class="contact__card">
-                <i class='bx bx-mail-send contact__card-icon'></i>
-                <h3 class="contact__card-title">Email</h3>
-                <span class="contact__card-data">anamariaorita@yahoo.com</span>
-            </div>
+            <h3 class="contact__title contact__title-info">Talk to Me</h3>
+            <div class="contact__info">
 
-            <div class="contact__card">
-                <i class='bx bxl-linkedin contact__card-icon'></i>
-                <h3 class="contact__card-title">LinkedIn</h3>
-                <span class="contact__card-data">Ana-Maria Orita</span>
-            </div>
+                <div class="contact__card">
+                    <i class='bx bx-mail-send contact__card-icon'></i>
+                    <h3 class="contact__card-title">Email</h3>
+                    <span class="contact__card-data">anamariaorita@yahoo.com</span>
+                    <a href="mailto:anamariaorita@yahoo.com" class="contact__button">
+                        Write Me <i class='bx bx-right-arrow contact__button-icon'></i>
+                    </a>
+                </div>
 
-            <div class="contact__card">
-                <i class='bx bx-book-open contact__card-icon'></i>
-                <h3 class="contact__card-title">HAL</h3>
-                <span class="contact__card-data">Research Profile</span>
+                <div class="contact__card">
+                    <i class='bx bxl-linkedin contact__card-icon'></i>
+                    <h3 class="contact__card-title">LinkedIn</h3>
+                    <span class="contact__card-data">Ana-Maria Oriță</span>
+                    <a href="https://www.linkedin.com/in/ana-maria-orita" target="_blank" class="contact__button">
+                        Connect <i class='bx bx-right-arrow contact__button-icon'></i>
+                    </a>
+                </div>
+
             </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact__content">
+            <h3 class="contact__title contact__title-form">Send Me a Message</h3>
+            <form action="" class="contact__form">
+                <div class="contact__form-div">
+                    <label for="name" class="contact__form-tag">Name</label>
+                    <input type="text" id="name" placeholder="Enter your name" class="contact__form-input" required>
+                </div>
+
+                <div class="contact__form-div">
+                    <label for="email" class="contact__form-tag">Email</label>
+                    <input type="email" id="email" placeholder="Enter your email" class="contact__form-input" required>
+                </div>
+
+                <div class="contact__form-div contact__form-area">
+                    <label for="message" class="contact__form-tag">Message</label>
+                    <textarea id="message" cols="30" rows="10" placeholder="Write your message" class="contact__form-input" required></textarea>
+                </div>
+
+                <button type="submit" class="button">Send Message</button>
+            </form>
         </div>
     </div>
 </section>
+
+<!--=============== FOOTER ===============-->
+<footer class="footer">
+    <div class="footer__container container">
+        <h1 class="footer__title">Ana-Maria Oriță</h1>
+
+        <ul class="footer__list">
+            <li class="footer__item"><a href="#home" class="footer__link">Home</a></li>
+            <li class="footer__item"><a href="#about" class="footer__link">About</a></li>
+            <li class="footer__item"><a href="#research" class="footer__link">Research</a></li>
+            <li class="footer__item"><a href="#publications" class="footer__link">Publications</a></li>
+            <li class="footer__item"><a href="#contact" class="footer__link">Contact</a></li>
+        </ul>
+
+        <ul class="footer__social">
+            <li class="footer__social-item">
+                <a href="https://www.linkedin.com/in/ana-maria-orita" target="_blank" class="footer__social-link">
+                    <i class='bx bxl-linkedin footer__social-icon'></i>
+                </a>
+            </li>
+            <li class="footer__social-item">
+                <a href="https://orcid.org/0000-0002-XXXX-XXXX" target="_blank" class="footer__social-link">
+                    <i class='bx bxl-orcid footer__social-icon'></i>
+                </a>
+            </li>
+        </ul>
+
+        <span class="footer__copy">
+            &#169; 2026 Ana-Maria Oriță. All rights reserved.
+        </span>
+    </div>
+</footer>
+
+<!--=============== SCRIPTS ===============-->
+<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+<script src="assets/js/swiper-bundle.min.js"></script>
+<script src="assets/js/mixitup.min.js"></script>
+<script src="assets/js/main.js"></script>
+
 
 </main>
 
