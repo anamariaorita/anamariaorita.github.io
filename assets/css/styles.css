@@ -788,21 +788,17 @@ body.light-theme {
   margin-bottom: 1.5rem;
 }
 
-/* ================= CONTACT CARDS INLINE RESPONSIVE ================= */
 .contact__info {
-  display: flex;
-  flex-wrap: wrap;          /* dacă nu încape, cardurile se mută pe rând */
-  gap: 2rem;                /* spațiu între carduri */
-  justify-content: center;  /* centru pe orizontală */
+  display: grid;
+  gap: 1rem;
 }
 
 .contact__card {
-  flex: 1 1 250px;          /* minim 250px, se poate extinde */
-  max-width: 300px;         /* nu devine prea lat */
+  background-color: var(--container-color);
+  padding: 2rem 1rem;
+  border-radius: 0.75rem;
   text-align: center;
 }
-/* Pe mobil: cardurile pe verticală */
-
 
 .contact__card-icon {
   font-size: 2rem;
@@ -1084,6 +1080,53 @@ body.light-theme {
     margin: auto;
   }
 
+  .contact__container {
+    display: grid;
+    grid-template-columns: 220px 340px;
+    column-gap: 2rem;
+    justify-content: center;
+  }
+
+  .contact__info {
+    grid-template-columns: 200px;
+    gap: 1rem;
+  }
+
+  .contact__form {
+    width: 340px;
+  }
+  /* .contact__info {
+    grid-template-columns: 350px;
+    justify-content: center;
+  }
+
+  .contact__form {
+    width: 360px;
+    margin: 0 auto;
+  } */
+}
+
+/* @media screen and (min-width: 767px) {
+  /* .work__container {
+    grid-template-columns: repeat(2, max-content);
+  } */
+
+/* .contact__info {
+    grid-template-columns: 300px;
+  }
+
+  .contact__container {
+    grid-template-columns: repeat(2, 325px);
+    justify-content: center;
+  }
+} */
+
+/* For large devices */
+@media screen and (min-width: 992px) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
 
   .section {
     padding: 6.5rem 0 1rem;
@@ -1190,19 +1233,11 @@ body.light-theme {
     padding: 1.5rem 2rem;
   }
 
-  /* ================= CONTACT CARDS INLINE ================= */
-.contact__info {
-  display: flex !important;    /* forțăm să fie flex */
-  gap: 2rem;                   /* spațiu între carduri */
-  flex-wrap: wrap;             /* să se ducă pe rând dacă ecranul e prea mic */
-  justify-content: center;     /* centru pe orizontală */
-}
+  .contact__info {
+    grid-template-columns: 430px;
+    gap: 1rem;
+  }
 
-.contact__card {
-  flex: 1 1 200px;             /* fiecare card ocupă minim 200px și se poate extinde */
-  max-width: 300px;            /* nu devine prea lat */
-  text-align: center;
-}
   .contact__form {
     width: 430px;
   }
@@ -1232,4 +1267,4 @@ body.light-theme {
 }
  
 
-}
+} 
