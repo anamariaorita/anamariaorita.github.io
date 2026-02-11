@@ -2,141 +2,36 @@
 <html lang="en">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--=============== ICONS ===============-->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 
-<!--=============== ICONS ===============-->
-<link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css">
 
-<!--=============== CSS ===============-->
-<link rel="stylesheet" href="assets/css/styles.css">
-
-<title>Ana-Maria Orita | PhD Student</title>
-
-<style>
-/* ===== Base Styles ===== */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #ffffff; /* Light Mode */
-    color: #111111;
-    transition: all 0.4s ease;
-}
-
-.header {
-    background-color: #ffffff;
-    transition: all 0.4s ease;
-    padding: 1rem 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-}
-
-.nav__link i {
-    color: #111111;
-    transition: all 0.3s ease;
-}
-
-.section {
-    background-color: #f7f7f7;
-    padding: 3rem 0;
-    transition: all 0.4s ease;
-    border-radius: 12px;
-    margin-bottom: 2rem;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-}
-
-/* Boxes and Cards */
-.about__box, .skills__box div, .work__card, .services__card, .contact__card {
-    background-color: #ffffff;
-    border-radius: 10px;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    transition: all 0.4s ease;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-}
-
-/* Buttons */
-.button, .theme-button {
-    cursor: pointer;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    font-size: 0.9rem;
-    transition: all 0.3s ease;
-    background-color: #4db5ff;
-    color: #ffffff;
-}
-.button:hover, .theme-button:hover {
-    opacity: 0.9;
-}
-
-/* Social Icons */
-.home__social-link i {
-    color: #111111;
-    font-size: 1.5rem;
-    transition: all 0.3s ease;
-}
-
-/* ===== Dark Theme ===== */
-body.dark-theme {
-    background-color: #111111;
-    color: #ffffff;
-}
-
-body.dark-theme .header {
-    background-color: #1a1a1a;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
-}
-
-body.dark-theme .nav__link i {
-    color: #ffffff;
-}
-
-body.dark-theme .section {
-    background-color: #1a1a1a;
-    box-shadow: 0 4px 15px rgba(255,255,255,0.05);
-}
-
-body.dark-theme .about__box, 
-body.dark-theme .skills__box div, 
-body.dark-theme .work__card, 
-body.dark-theme .services__card, 
-body.dark-theme .contact__card {
-    background-color: #222222;
-    color: #ffffff;
-    box-shadow: 0 2px 10px rgba(255,255,255,0.05);
-}
-
-body.dark-theme .button, 
-body.dark-theme .theme-button {
-    background-color: #4db5ff;
-    color: #111111;
-}
-
-body.dark-theme .home__social-link i {
-    color: #ffffff;
-}
-</style>
+    <title>Ana-Maria Orita | PhD Student</title>
 </head>
 
 <body>
 
 <!--=============== HEADER ===============-->
 <header class="header" id="header">
-<nav class="nav container">
-    <a href="#about" class="nav__logo">Ana-Maria Orita</a>
+    <nav class="nav container">
+        <!-- Logo schimbat cu icon user -->
+        <a href="#about" class="nav__logo"><i class='bx bx-user'></i></a>
 
-    <div class="nav__menu">
-        <ul class="nav__list">
-            <li class="nav__item"><a href="#about" class="nav__link"><i class='bx bx-user'></i></a></li>
-            <li class="nav__item"><a href="#research" class="nav__link"><i class='bx bx-book'></i></a></li>
-            <li class="nav__item"><a href="#publications" class="nav__link"><i class='bx bx-file'></i></a></li>
-            <li class="nav__item"><a href="#talks" class="nav__link"><i class='bx bx-microphone'></i></a></li>
-            <li class="nav__item"><a href="#contact" class="nav__link"><i class='bx bx-message-square-dots'></i></a></li>
-        </ul>
-    </div>
-
-    <!-- Buton luminozitate -->
-    <button class="theme-button" id="theme-toggle">🌙 Dark Mode</button>
-</nav>
+        <div class="nav__menu">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#about" class="nav__link"><i class='bx bx-user'></i></a></li>
+                <li class="nav__item"><a href="#research" class="nav__link"><i class='bx bx-book'></i></a></li>
+                <li class="nav__item"><a href="#publications" class="nav__link"><i class='bx bx-file'></i></a></li>
+                <li class="nav__item"><a href="#talks" class="nav__link"><i class='bx bx-microphone'></i></a></li>
+                <li class="nav__item"><a href="#contact" class="nav__link"><i class='bx bx-message-square-dots'></i></a></li>
+            </ul>
+        </div>
+    </nav>
 </header>
 
 <!--=============== MAIN ===============-->
@@ -145,10 +40,12 @@ body.dark-theme .home__social-link i {
 <!--=============== ABOUT ===============-->
 <section class="about section" id="about">
     <span class="section__subtitle">Profile</span>
+    <!-- Numele mutat aici -->
+    <h1 class="about__name">Ana-Maria Orita</h1>
     <h2 class="section__title">About Me</h2>
 
     <div class="about__container container grid">
-        <img src="assets/img/photo.jpg" alt="Ana-Maria Orita" class="about__img">
+        <img src="assets/img/about.jpg" alt="Ana-Maria Orita" class="about__img">
 
         <div class="about__data">
             <div class="about__info">
@@ -298,18 +195,6 @@ body.dark-theme .home__social-link i {
         © 2026 Ana-Maria Orita — Academic Website
     </span>
 </footer>
-
-<script>
-const themeButton = document.getElementById('theme-toggle');
-themeButton.addEventListener('click', () => {
-    document.body.classList.toggle('dark-theme');
-    if(document.body.classList.contains('dark-theme')) {
-        themeButton.textContent = '☀️ Light Mode';
-    } else {
-        themeButton.textContent = '🌙 Dark Mode';
-    }
-});
-</script>
 
 </body>
 </html>
