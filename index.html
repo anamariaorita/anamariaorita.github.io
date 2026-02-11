@@ -17,21 +17,21 @@
 <body>
 
 <!--=============== HEADER ===============-->
-    <header class="header" id="header">
+<header class="header" id="header">
     <nav class="nav container">
-        <a href="#" class="nav__logo">Ana-Maria Orita</a>
-        <ul class="nav__list">
-            <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-            <li class="nav__item"><a href="#research" class="nav__link">Research</a></li>
-            <li class="nav__item"><a href="#publications" class="nav__link">Publications</a></li>
-            <li class="nav__item"><a href="#talks" class="nav__link">Talks</a></li>
-            <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
-        </ul>
+        <a href="#about" class="nav__logo">Ana-Maria Orita</a>
+
+        <div class="nav__menu">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#about" class="nav__link"><i class='bx bx-user'></i></a></li>
+                <li class="nav__item"><a href="#research" class="nav__link"><i class='bx bx-book'></i></a></li>
+                <li class="nav__item"><a href="#publications" class="nav__link"><i class='bx bx-file'></i></a></li>
+                <li class="nav__item"><a href="#talks" class="nav__link"><i class='bx bx-microphone'></i></a></li>
+                <li class="nav__item"><a href="#contact" class="nav__link"><i class='bx bx-message-square-dots'></i></a></li>
+            </ul>
+        </div>
     </nav>
 </header>
-
-<main>
-
 
 <!--=============== MAIN ===============-->
 <main class="main">
@@ -42,9 +42,8 @@
     <h2 class="section__title">About Me</h2>
 
     <div class="about__container container grid">
-        <img src="assets/img/photo.jpg" alt="Ana-Maria Orita" class="about__img">
-
         <div class="about__data">
+
             <div class="about__info">
                 <div class="about__box">
                     <i class='bx bx-building about__icon'></i>
@@ -67,9 +66,15 @@
 
             <p class="about__description">
                 I am a PhD student at Université Clermont Auvergne (LMBP), focusing on numerical analysis and
-                controllability of second-order PDEs, including wave and Euler–Bernoulli beam equations.
+                controllability of second-order partial differential equations, including wave and Euler–Bernoulli beam equations.
                 My research emphasizes high-order finite difference schemes and spectral analysis of discretized operators.
             </p>
+
+            <div class="about__button">
+                <a href="assets/pdf/CV_AnaMariaOrita.pdf" class="button button--ghost" download>
+                    Download Academic CV
+                </a>
+            </div>
         </div>
     </div>
 </section>
@@ -83,18 +88,16 @@
 
         <div class="skills__content">
             <h3 class="skills__title">Research Topics</h3>
-
             <div class="skills__box">
                 <div class="skills__data"><i class='bx bxs-badge-check'></i><h3 class="skills__name">Controllability & Observability of PDEs</h3></div>
                 <div class="skills__data"><i class='bx bxs-badge-check'></i><h3 class="skills__name">Wave & Beam Equations</h3></div>
                 <div class="skills__data"><i class='bx bxs-badge-check'></i><h3 class="skills__name">Spectral Analysis of Discretized Operators</h3></div>
-                <div class="skills__data"><i class='bx bxs-badge-check'></i><h3 class="skills__name">High-order Finite Difference Schehmes</h3></div>
+                <div class="skills__data"><i class='bx bxs-badge-check'></i><h3 class="skills__name">High-order Finite Difference Schemes</h3></div>
             </div>
         </div>
 
         <div class="skills__content">
             <h3 class="skills__title">Computational Tools</h3>
-
             <div class="skills__box">
                 <div class="skills__data"><i class='bx bxs-badge-check'></i><h3 class="skills__name">Python, Julia</h3></div>
                 <div class="skills__data"><i class='bx bxs-badge-check'></i><h3 class="skills__name">FreeFem++</h3></div>
@@ -195,8 +198,3 @@
 
 </body>
 </html>
-
-
-
-
-
