@@ -4,216 +4,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!--=============== FAVICON ===============-->
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
-    <link rel="manifest" href="assets/favicons/site.webmanifest">
-    <link rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="assets/favicons/favicon.ico">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="msapplication-config" content="assets/favicons/browserconfig.xml">
-    <meta name="theme-color" content="#a789d4">
-
-    <!--=============== BOXICONS ===============-->
+    <title>Ana-Maria Oriță | PhD in Applied Mathematics</title>
+    
+    <!-- Icons -->
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-
-    <!--=============== SWIPER CSS ===============-->
-    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-
-    <!--=============== CSS ===============-->
+    
+    <!-- CSS -->
     <link rel="stylesheet" href="assets/css/styles.css">
-
-    <title>Ana-Maria Orita – PhD Student</title>
 </head>
 
 <body>
-    <!--=============== HEADER ===============-->
+    <!-- HEADER -->
     <header class="header" id="header">
         <nav class="nav container">
-            <a href="#" class="nav__logo">Ana-Maria Orita</a>
-
+            <a href="#" class="nav__logo">Ana-Maria Oriță</a>
             <div class="nav__menu">
                 <ul class="nav__list">
                     <li class="nav__item"><a href="#home" class="nav__link"><i class='bx bx-home'></i></a></li>
                     <li class="nav__item"><a href="#about" class="nav__link"><i class='bx bx-user'></i></a></li>
                     <li class="nav__item"><a href="#research" class="nav__link"><i class='bx bx-book'></i></a></li>
                     <li class="nav__item"><a href="#publications" class="nav__link"><i class='bx bx-file'></i></a></li>
-                    <li class="nav__item"><a href="#talks" class="nav__link"><i class='bx bx-voice'></i></a></li>
-                    <li class="nav__item"><a href="#contact" class="nav__link"><i class='bx bx-message-square-dots'></i></a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link"><i class='bx bx-envelope'></i></a></li>
                 </ul>
             </div>
-
-            <!-- Theme change button -->
-            <i class='bx bx-moon change-theme change-theme-button' id="theme-button"></i>
         </nav>
     </header>
 
-    <!--=============== MAIN ===============-->
-    <main class="main">
-        <!--=============== HOME ===============-->
-        <section class="home section" id="home">
-            <div class="home__container container grid">
-                <div class="home__data">
-                    <h1 class="home__name">Ana-Maria Orita</h1>
-                    <h3 class="home__education">PhD Student in Applied Mathematics</h3>
+    <!-- HOME -->
+    <section class="home section" id="home">
+        <div class="home__container container grid">
+            <div class="home__data">
+                <span class="home__greeting">Hello, I'm</span>
+                <h1 class="home__name">Ana-Maria Oriță</h1>
+                <h3 class="home__education">PhD Student in Applied Mathematics</h3>
+                <p class="home__description">
+                    Research on numerical analysis, PDE controllability, and high-order discretization schemes.
+                </p>
+            </div>
+            <div class="home__handle">
+                <img src="assets/img/photo.jpg" alt="Ana-Maria Oriță" class="home__img">
+            </div>
+        </div>
+    </section>
 
-                    <div class="home__button">
-                        <a download="" href="assets/pdf/Ana-Maria-Orita-CV.pdf" class="button button--ghost">
-                            Download CV
-                        </a>
+    <!-- ABOUT -->
+    <section class="about section" id="about">
+        <span class="section__subtitle">Profile</span>
+        <h2 class="section__title">About Me</h2>
+        <div class="about__container container grid">
+            <div class="about__data">
+                <p>
+                    I am a PhD student at Université Clermont Auvergne, focusing on numerical analysis of PDEs, high-order
+                    discretization, and controllability studies. My work involves both theoretical and computational research.
+                </p>
+                <ul class="about__info">
+                    <li><i class='bx bx-award'></i> 8+ years of academic and research experience</li>
+                    <li><i class='bx bx-briefcase'></i> 48+ research projects & collaborations</li>
+                    <li><i class='bx bx-support'></i> Fluent in Romanian, English, French, and Spanish</li>
+                </ul>
+            </div>
+            <div class="about__img">
+                <img src="assets/img/about.jpg" alt="Profile">
+            </div>
+        </div>
+    </section>
 
-                        <a href="#about" class="button">About</a>
+    <!-- RESEARCH & EXPERIENCE -->
+    <section class="skills section" id="research">
+        <span class="section__subtitle">Research & Work</span>
+        <h2 class="section__title">Experience</h2>
+        <div class="skills__container container grid">
+            <div class="skills__content">
+                <h3 class="skills__title">Research</h3>
+                <div class="skills__box">
+                    <div class="skills__group">
+                        <div class="skills__data">
+                            <h3 class="skills__name">PhD at Université Clermont Auvergne (2024–Present)</h3>
+                            <span>Numerical analysis and controllability of second-order PDEs, high-order discretization, spectral methods.</span>
+                        </div>
+                        <div class="skills__data">
+                            <h3 class="skills__name">Research Intern - LMBP (Feb 2024 – Jun 2024)</h3>
+                            <span>Spectral analysis of the Laplacian and controllability of 1D wave equation.</span>
+                        </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <div class="home__handle">
-                    <img src="assets/img/photo.jpg" alt="Ana-Maria Orita" class="home__img">
-                </div>
-
-                <div class="home__social">
-                    <a href="#" target="_blank" class="home__social-link"><i class='bx bxl-linkedin'></i></a>
-                    <a href="#" target="_blank" class="home__social-link"><i class='bx bxl-github'></i></a>
-                </div>
-
-                <a href="#about" class="home__scroll">
-                    <i class='bx bx-mouse home__scroll-icon'></i>
-                    <span class="home__scroll-name">Scroll Down</span>
+    <!-- PUBLICATIONS -->
+    <section class="work section" id="publications">
+        <span class="section__subtitle">Publications</span>
+        <h2 class="section__title">Selected Works</h2>
+        <div class="work__container container grid">
+            <div class="work__card">
+                <h3 class="work__title">Uniform boundary observability for a fourth order finite-differences semi-discretization of the 1-d wave equation</h3>
+                <p>Nicolae Cîndea, Ana-Maria Oriță, Ionel Rovența</p>
+                <a href="https://hal.science/hal-05323525v1" target="_blank" class="work__button">
+                    Read Article <i class='bx bx-right-arrow work__icon'></i>
                 </a>
             </div>
-        </section>
-
-        <!--=============== ABOUT ===============-->
-        <section class="about section" id="about">
-            <span class="section__subtitle">Introduction</span>
-            <h2 class="section__title">About Me</h2>
-
-            <div class="about__container container grid">
-                <img src="assets/img/about.jpg" alt="Ana-Maria Orita" class="about__img">
-
-                <div class="about__data">
-                    <p>I am a PhD student at Université Clermont Auvergne (LMBP). My research focuses on numerical analysis and controllability of second-order partial differential equations, including wave and Euler–Bernoulli beam equations. I am particularly interested in high-order finite difference schemes and spectral analysis of discretized operators.</p>
-
-                    <a href="#contact" class="button about__button-contact">Contact Me</a>
-                </div>
-            </div>
-        </section>
-
-        <!--=============== RESEARCH ===============-->
-        <section class="research section" id="research">
-            <span class="section__subtitle">Focus Areas</span>
-            <h2 class="section__title">Research Interests</h2>
-
-            <div class="container">
-                <ul>
-                    <li>Numerical analysis of wave and beam equations</li>
-                    <li>Controllability of partial differential equations (PDEs)</li>
-                    <li>High-order finite difference methods</li>
-                    <li>Spectral analysis of discretized operators</li>
-                    <li>Stability and convergence of numerical schemes</li>
-                </ul>
-            </div>
-        </section>
-
-        <!--=============== PUBLICATIONS ===============-->
-        <section class="publications section" id="publications">
-            <span class="section__subtitle">Work</span>
-            <h2 class="section__title">Publications</h2>
-
-            <div class="container">
-                <ol>
-                    <li>Orita, A.-M., et al., *Title of Paper 1*, Journal Name, 2023.</li>
-                    <li>Orita, A.-M., et al., *Title of Paper 2*, Journal Name, 2022.</li>
-                </ol>
-            </div>
-        </section>
-
-        <!--=============== TALKS ===============-->
-        <section class="talks section" id="talks">
-            <span class="section__subtitle">Conferences</span>
-            <h2 class="section__title">Talks & Presentations</h2>
-
-            <div class="container">
-                <ul>
-                    <li>International Conference on PDEs, Talk Title, 2024</li>
-                    <li>Workshop on Numerical Methods, Talk Title, 2023</li>
-                </ul>
-            </div>
-        </section>
-
-        <!--=============== CONTACT ===============-->
-        <section class="contact section" id="contact">
-            <span class="section__subtitle">Get in Touch</span>
-            <h2 class="section__title">Contact Me</h2>
-
-            <div class="contact__container container grid">
-                <div class="contact__content">
-                    <h3 class="contact__title">Reach Me</h3>
-                    <div class="contact__info">
-                        <div class="contact__card">
-                            <i class='bx bx-mail-send contact__card-icon'></i>
-                            <h3 class="contact__card-title">Email</h3>
-                            <span class="contact__card-data">ana.orita@uca.fr</span>
-                        </div>
-                        <div class="contact__card">
-                            <i class='bx bx-building contact__card-icon'></i>
-                            <h3 class="contact__card-title">Lab</h3>
-                            <span class="contact__card-data">Laboratoire de Mathématiques et de leurs Applications (LMBP)</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="contact__content">
-                    <h3 class="contact__title">Message</h3>
-                    <form action="" class="contact__form">
-                        <div class="contact__form-div">
-                            <label class="contact__form-tag">Name</label>
-                            <input type="text" placeholder="Enter your name" class="contact__form-input">
-                        </div>
-                        <div class="contact__form-div">
-                            <label class="contact__form-tag">Email</label>
-                            <input type="email" placeholder="Enter your email" class="contact__form-input">
-                        </div>
-                        <div class="contact__form-div contact__form-area">
-                            <label class="contact__form-tag">Message</label>
-                            <textarea cols="30" rows="10" placeholder="Write your message" class="contact__form-input"></textarea>
-                        </div>
-                        <button class="button">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!--=============== FOOTER ===============-->
-    <footer class="footer">
-        <div class="footer__container container">
-            <h1 class="footer__title">Ana-Maria Orita</h1>
-            <ul class="footer__list">
-                <li class="footer__item"><a href="#home" class="footer__link">Home</a></li>
-                <li class="footer__item"><a href="#about" class="footer__link">About</a></li>
-                <li class="footer__item"><a href="#research" class="footer__link">Research</a></li>
-                <li class="footer__item"><a href="#publications" class="footer__link">Publications</a></li>
-                <li class="footer__item"><a href="#talks" class="footer__link">Talks</a></li>
-                <li class="footer__item"><a href="#contact" class="footer__link">Contact</a></li>
-            </ul>
-
-            <span class="footer__copy">&#169; 2026 Ana-Maria Orita. All rights reserved.</span>
         </div>
-    </footer>
+    </section>
 
-    <!--=============== SCROLLREVEAL ===============-->
-    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
-
-    <!--=============== SWIPER JS ===============-->
-    <script src="assets/js/swiper-bundle.min.js"></script>
-
-    <!--=============== MIXITUP FILTER ===============-->
-    <script src="assets/js/mixitup.min.js"></script>
-
-    <!--=============== MAIN JS ===============-->
-    <script src="assets/js/main.js"></script>
+    <!-- CONTACT -->
+    <section class="contact section" id="contact">
+        <span class="section__subtitle">Get in Touch</span>
+        <h2 class="section__title">Contact Me</h2>
+        <div class="contact__container container grid">
+            <div class="contact__content">
+                <div class="contact__card">
+                    <i class='bx bx-envelope contact__card-icon'></i>
+                    <h3>Email</h3>
+                    <span>anamariaorita@yahoo.com</span>
+                </div>
+                <div class="contact__card">
+                    <i class='bx bxl-linkedin contact__card-icon'></i>
+                    <h3>LinkedIn</h3>
+                    <a href="https://www.linkedin.com/in/ana-maria-orita" target="_blank">Profile</a>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 
 </html>
