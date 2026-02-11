@@ -231,3 +231,17 @@ sr.reveal(`.footer, footer__container`, {
   origin: "bottom",
   distance: "30px",
 });
+/*=============== TOGGLE TALKS & CONFERENCES ===============*/
+const toggleTitles = document.querySelectorAll('.toggle-title');
+
+toggleTitles.forEach(title => {
+  title.addEventListener('click', () => {
+    const content = title.nextElementSibling;
+    // Toggle vizibilitate
+    if (content.style.display === 'block') {
+      content.style.display = 'none';
+    } else {
+      content.style.display = 'block';
+    }
+  });
+});
