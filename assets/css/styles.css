@@ -110,6 +110,24 @@ img {
   max-width: 100%;
   height: auto;
 }
+/* Ascunde detaliile inițial */
+.toggle-content {
+  display: none;
+  margin-top: 0.5rem;
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
+}
+
+/* Cursor pointer pe titlu */
+.toggle-title {
+  cursor: pointer;
+  color: var(--first-color);
+}
+
+/* Optional: efect hover */
+.toggle-title:hover {
+  text-decoration: underline;
+}
 
 /*=============== THEME ===============*/
 .change__theme {
