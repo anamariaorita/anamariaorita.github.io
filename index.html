@@ -2,61 +2,78 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!--=============== ICONS ===============-->
-    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!--=============== CSS ===============-->
-    <link rel="stylesheet" href="assets/css/styles.css">
+<!--=============== ICONS ===============-->
+<link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 
-    <title>Ana-Maria Orita | PhD Student</title>
+<!--=============== CSS ===============-->
+<link rel="stylesheet" href="assets/css/styles.css">
 
-    <style>
-        /* ===== Light/Dark Theme ===== */
-        body.dark-theme {
-            background-color: #111;
-            color: #fff;
-        }
-        body.dark-theme .section {
-            background-color: #1a1a1a;
-        }
-        .theme-button {
-            cursor: pointer;
-            background-color: #4db5ff;
-            border: none;
-            padding: 0.5rem 1rem;
-            color: white;
-            border-radius: 5px;
-            font-size: 0.9rem;
-        }
-        .theme-button:hover {
-            opacity: 0.9;
-        }
-    </style>
+<title>Ana-Maria Orita | PhD Student</title>
+
+<style>
+/* ===== Light / Dark Theme ===== */
+body {
+    background-color: #ffffff; /* Light Mode implicit */
+    color: #111111;
+    font-family: Arial, sans-serif;
+    transition: all 0.3s ease;
+}
+
+.section {
+    background-color: #f7f7f7;
+    transition: all 0.3s ease;
+}
+
+body.dark-theme {
+    background-color: #111111;
+    color: #ffffff;
+}
+
+body.dark-theme .section {
+    background-color: #1a1a1a;
+}
+
+/* Buton toggle */
+.theme-button {
+    cursor: pointer;
+    background-color: #4db5ff;
+    border: none;
+    padding: 0.5rem 1rem;
+    color: white;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.theme-button:hover {
+    opacity: 0.9;
+}
+</style>
 </head>
 
 <body>
 
 <!--=============== HEADER ===============-->
 <header class="header" id="header">
-    <nav class="nav container">
-        <a href="#about" class="nav__logo">Ana-Maria Orita</a>
+<nav class="nav container">
+    <a href="#about" class="nav__logo">Ana-Maria Orita</a>
 
-        <div class="nav__menu">
-            <ul class="nav__list">
-                <li class="nav__item"><a href="#about" class="nav__link"><i class='bx bx-user'></i></a></li>
-                <li class="nav__item"><a href="#research" class="nav__link"><i class='bx bx-book'></i></a></li>
-                <li class="nav__item"><a href="#publications" class="nav__link"><i class='bx bx-file'></i></a></li>
-                <li class="nav__item"><a href="#talks" class="nav__link"><i class='bx bx-microphone'></i></a></li>
-                <li class="nav__item"><a href="#contact" class="nav__link"><i class='bx bx-message-square-dots'></i></a></li>
-            </ul>
-        </div>
+    <div class="nav__menu">
+        <ul class="nav__list">
+            <li class="nav__item"><a href="#about" class="nav__link"><i class='bx bx-user'></i></a></li>
+            <li class="nav__item"><a href="#research" class="nav__link"><i class='bx bx-book'></i></a></li>
+            <li class="nav__item"><a href="#publications" class="nav__link"><i class='bx bx-file'></i></a></li>
+            <li class="nav__item"><a href="#talks" class="nav__link"><i class='bx bx-microphone'></i></a></li>
+            <li class="nav__item"><a href="#contact" class="nav__link"><i class='bx bx-message-square-dots'></i></a></li>
+        </ul>
+    </div>
 
-        <!-- Buton luminozitate -->
-        <button class="theme-button" id="theme-toggle">🌙 Dark Mode</button>
-    </nav>
+    <!-- Buton luminozitate -->
+    <button class="theme-button" id="theme-toggle">🌙 Dark Mode</button>
+</nav>
 </header>
 
 <!--=============== MAIN ===============-->
@@ -106,6 +123,7 @@
     <h2 class="section__title">Research Interests & Tools</h2>
 
     <div class="skills__container container grid">
+
         <div class="skills__content">
             <h3 class="skills__title">Research Topics</h3>
 
@@ -220,15 +238,15 @@
 
 <!--=============== JS Luminozitate ===============-->
 <script>
-    const themeButton = document.getElementById('theme-toggle');
-    themeButton.addEventListener('click', () => {
-        document.body.classList.toggle('dark-theme');
-        if(document.body.classList.contains('dark-theme')) {
-            themeButton.textContent = '☀️ Light Mode';
-        } else {
-            themeButton.textContent = '🌙 Dark Mode';
-        }
-    });
+const themeButton = document.getElementById('theme-toggle');
+themeButton.addEventListener('click', () => {
+    document.body.classList.toggle('dark-theme');
+    if(document.body.classList.contains('dark-theme')) {
+        themeButton.textContent = '☀️ Light Mode';
+    } else {
+        themeButton.textContent = '🌙 Dark Mode';
+    }
+});
 </script>
 
 </body>
