@@ -2,16 +2,117 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!--=============== ICONS ===============-->
-    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!--=============== CSS ===============-->
-    <link rel="stylesheet" href="assets/css/styles.css">
+<!--=============== FAVICON ===============-->
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+<link rel="manifest" href="assets/favicons/site.webmanifest">
+<link rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="assets/favicons/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="assets/favicons/browserconfig.xml">
+<meta name="theme-color" content="#a789d4">
 
-    <title>Ana-Maria Orita | PhD Student</title>
+<!--=============== BOXICONS ===============-->
+<link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+<!--=============== SWIPER CSS ===============-->
+<link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+<!--=============== CSS ===============-->
+<link rel="stylesheet" href="assets/css/styles.css">
+
+<title>Hailee's Portfolio</title>
+
+<style>
+/* ===== Variabile pentru Light / Dark ===== */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #111111;
+    --accent-color: #4db5ff;
+    --section-bg: #f7f7f7;
+}
+
+body.dark-theme {
+    --bg-color: #111111;
+    --text-color: #ffffff;
+    --accent-color: #4db5ff;
+    --section-bg: #1a1a1a;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+header.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--section-bg);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav__logo {
+    font-size: 1.2rem;
+}
+
+.nav__list {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav__link {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.section {
+    padding: 4rem 2rem;
+    background-color: var(--section-bg);
+}
+
+h1.about__name {
+    font-size: 2rem;
+    margin-bottom: 0.3rem;
+}
+
+h2.section__title {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.theme-toggle-container .button {
+    background-color: var(--accent-color);
+    color: #fff;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.theme-toggle-container .button:hover {
+    opacity: 0.9;
+}
+</style>
+
 </head>
 
 <body>
@@ -19,167 +120,157 @@
 <!--=============== HEADER ===============-->
 <header class="header" id="header">
     <nav class="nav container">
-        <a href="#about" class="nav__logo">Ana-Maria Orita</a>
-
+        <a href="#about" class="nav__logo">Hailee</a>
         <div class="nav__menu">
             <ul class="nav__list">
+                <li class="nav__item"><a href="#home" class="nav__link"><i class='bx bx-home'></i></a></li>
                 <li class="nav__item"><a href="#about" class="nav__link"><i class='bx bx-user'></i></a></li>
-                <li class="nav__item"><a href="#research" class="nav__link"><i class='bx bx-book'></i></a></li>
-                <li class="nav__item"><a href="#publications" class="nav__link"><i class='bx bx-file'></i></a></li>
-                <li class="nav__item"><a href="#talks" class="nav__link"><i class='bx bx-microphone'></i></a></li>
+                <li class="nav__item"><a href="#skills" class="nav__link"><i class='bx bx-book'></i></a></li>
+                <li class="nav__item"><a href="#work" class="nav__link"><i class='bx bx-briefcase-alt-2'></i></a></li>
                 <li class="nav__item"><a href="#contact" class="nav__link"><i class='bx bx-message-square-dots'></i></a></li>
             </ul>
         </div>
+        <!-- Buton toggle în header -->
+        <i class='bx bx-moon change-theme change-theme-button' id="theme-button"></i>
     </nav>
 </header>
 
 <!--=============== MAIN ===============-->
 <main class="main">
 
+<!--=============== HOME ===============-->
+<section class="home section" id="home">
+    <div class="home__container container grid">
+        <div class="home__data">
+            <!-- Am scos "Hello, I'm" -->
+            <h1 class="home__name">Hailee Keys</h1>
+            <h3 class="home__education">Frontend Developer</h3>
+            <div class="home__button">
+                <a download="" href="assets/pdf/hailee-Cv.pdf" class="button button--ghost">Download CV</a>
+                <a href="#about" class="button">About</a>
+            </div>
+        </div>
+        <div class="home__handle">
+            <img src="assets/img/perfil.png" alt="" class="home__img">
+        </div>
+        <div class="home__social">
+            <a href="#" target="_blank" class="home__social-link"><i class='bx bxl-linkedin'></i></a>
+            <a href="#" target="_blank" class="home__social-link"><i class='bx bxl-github'></i></a>
+            <a href="#" target="_blank" class="home__social-link"><i class='bx bxl-dribbble'></i></a>
+        </div>
+        <a href="#about" class="home__scroll">
+            <i class='bx bx-mouse home__scroll-icon'></i>
+            <span class="home__scroll-name">Scroll Down</span>
+        </a>
+    </div>
+</section>
+
 <!--=============== ABOUT ===============-->
 <section class="about section" id="about">
-    <span class="section__subtitle">Profile</span>
+    <span class="section__subtitle">My Intro</span>
+    <h1 class="about__name">Hailee Keys</h1>
     <h2 class="section__title">About Me</h2>
 
     <div class="about__container container grid">
-        <img src="assets/img/photo.jpg" alt="Ana-Maria Orita" class="about__img">
-
+        <img src="assets/img/about.jpg" alt="" class="about__img">
         <div class="about__data">
             <div class="about__info">
                 <div class="about__box">
-                    <i class='bx bx-building about__icon'></i>
-                    <h3 class="about__title">Institution</h3>
-                    <span class="about__subtitle">Université Clermont Auvergne (LMBP)</span>
+                    <i class='bx bx-award about__icon'></i>
+                    <h3 class="about__title">Experience</h3>
+                    <span class="about__subtitle">8 Years Working</span>
                 </div>
-
                 <div class="about__box">
-                    <i class='bx bx-book about__icon'></i>
-                    <h3 class="about__title">Field</h3>
-                    <span class="about__subtitle">Applied Mathematics</span>
+                    <i class='bx bx-briefcase-alt about__icon'></i>
+                    <h3 class="about__title">Completed</h3>
+                    <span class="about__subtitle">48+ Projects</span>
                 </div>
-
                 <div class="about__box">
-                    <i class='bx bx-pen about__icon'></i>
-                    <h3 class="about__title">PhD Topic</h3>
-                    <span class="about__subtitle">Controllability of PDEs</span>
+                    <i class='bx bx-support about__icon'></i>
+                    <h3 class="about__title">Support</h3>
+                    <span class="about__subtitle">Online 24/7</span>
                 </div>
             </div>
-
             <p class="about__description">
-                I am a PhD student at Université Clermont Auvergne (LMBP), focusing on numerical analysis and
-                controllability of second-order PDEs, including wave and Euler–Bernoulli beam equations.
-                My research emphasizes high-order finite difference schemes and spectral analysis of discretized operators.
+                Frontend Developer. I create web pages with UI/UX user interfaces. I have years of experience and many clients are happy with the work I did.
             </p>
+            <a href="#contact" class="button about__button-contact">Contact Me</a>
         </div>
     </div>
 </section>
 
-<!--=============== RESEARCH ===============-->
-<section class="skills section" id="research">
-    <span class="section__subtitle">Research</span>
-    <h2 class="section__title">Research Interests & Tools</h2>
-
+<!--=============== SKILLS ===============-->
+<section class="skills section" id="skills">
+    <span class="section__subtitle">My Abilities</span>
+    <h2 class="section__title">My Experience</h2>
     <div class="skills__container container grid">
-
         <div class="skills__content">
-            <h3 class="skills__title">Research Topics</h3>
-
+            <h3 class="skills__title">Frontend Development</h3>
             <div class="skills__box">
-                <div class="skills__data"><i class='bx bxs-badge-check'></i><h3 class="skills__name">Controllability & Observability of PDEs</h3></div>
-                <div class="skills__data"><i class='bx bxs-badge-check'></i><h3 class="skills__name">Wave & Beam Equations</h3></div>
-                <div class="skills__data"><i class='bx bxs-badge-check'></i><h3 class="skills__name">Spectral Analysis of Discretized Operators</h3></div>
-                <div class="skills__data"><i class='bx bxs-badge-check'></i><h3 class="skills__name">High-order Finite Difference Schehmes</h3></div>
+                <div class="skills__group">
+                    <div class="skills__data">
+                        <i class='bx bxs-badge-check'></i>
+                        <div>
+                            <h3 class="skills__name">HTML</h3>
+                            <span class="skills__level">Advanced</span>
+                        </div>
+                    </div>
+                    <div class="skills__data">
+                        <i class='bx bxs-badge-check'></i>
+                        <div>
+                            <h3 class="skills__name">CSS/SCSS</h3>
+                            <span class="skills__level">Advanced</span>
+                        </div>
+                    </div>
+                    <div class="skills__data">
+                        <i class='bx bxs-badge-check'></i>
+                        <div>
+                            <h3 class="skills__name">Javascript</h3>
+                            <span class="skills__level">Advanced</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills__group">
+                    <div class="skills__data">
+                        <i class='bx bxs-badge-check'></i>
+                        <div>
+                            <h3 class="skills__name">Bootstrap</h3>
+                            <span class="skills__level">Intermediate</span>
+                        </div>
+                    </div>
+                    <div class="skills__data">
+                        <i class='bx bxs-badge-check'></i>
+                        <div>
+                            <h3 class="skills__name">React</h3>
+                            <span class="skills__level">Intermediate</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
 
-        <div class="skills__content">
-            <h3 class="skills__title">Computational Tools</h3>
-
-            <div class="skills__box">
-                <div class="skills__data"><i class='bx bxs-badge-check'></i><h3 class="skills__name">Python, Julia</h3></div>
-                <div class="skills__data"><i class='bx bxs-badge-check'></i><h3 class="skills__name">FreeFem++</h3></div>
-                <div class="skills__data"><i class='bx bxs-badge-check'></i><h3 class="skills__name">Numerical Linear Algebra</h3></div>
-                <div class="skills__data"><i class='bx bxs-badge-check'></i><h3 class="skills__name">LaTeX</h3></div>
+            <!-- Buton toggle theme în Skills -->
+            <div class="theme-toggle-container">
+                <button id="theme-button-skills" class="button">🌙 Dark Mode</button>
             </div>
-        </div>
-    </div>
-</section>
-
-<!--=============== PUBLICATIONS ===============-->
-<section class="work section" id="publications">
-    <span class="section__subtitle">Research Output</span>
-    <h2 class="section__title">Publications</h2>
-
-    <div class="work__container container grid">
-        <div class="work__card">
-            <h3 class="work__title">Journal Article (2025)</h3>
-            <p>
-                <b>Uniform boundary observability for a fourth-order finite-differences semi-discretization
-                of the 1-d wave equation</b><br>
-                Nicolae Cîndea, Ana-Maria Orita, Ionel Rovența
-            </p>
-            <a href="https://hal.science/hal-05323525v1" target="_blank" class="work__button">
-                View on HAL <i class='bx bx-right-arrow work__icon'></i>
-            </a>
-        </div>
-    </div>
-</section>
-
-<!--=============== TALKS & EVENTS ===============-->
-<section class="services section" id="talks">
-    <span class="section__subtitle">Dissemination</span>
-    <h2 class="section__title">Talks & Conferences</h2>
-
-    <div class="services__container container grid">
-        <div class="services__card">
-            <h3 class="services__title">Invited Talk (2026)</h3>
-            <p>
-                “Some remarks on high-order finite-differences schemes. Consequences on the observability
-                of the wave equation.” <br>
-                EDP & Analyse Numérique Seminar, LMBP, Clermont-Ferrand.
-            </p>
-        </div>
-
-        <div class="services__card">
-            <h3 class="services__title">Summer School (2024)</h3>
-            <p>
-                9th Regional French-Romanian Summer School on Applied Mathematics, Sinaia, Romania.
-            </p>
-        </div>
-
-        <div class="services__card">
-            <h3 class="services__title">Scientific Events</h3>
-            <p>
-                Journées EDP Auvergne–Rhône-Alpes (2025) <br>
-                Journées Scientifiques de l’EDSF
-            </p>
         </div>
     </div>
 </section>
 
 <!--=============== CONTACT ===============-->
 <section class="contact section" id="contact">
-    <span class="section__subtitle">Contact</span>
+    <span class="section__subtitle">Contact Me</span>
     <h2 class="section__title">Get in Touch</h2>
-
     <div class="contact__container container grid">
         <div class="contact__content">
             <div class="contact__card">
                 <i class='bx bx-mail-send contact__card-icon'></i>
                 <h3 class="contact__card-title">Email</h3>
-                <span class="contact__card-data">anamariaorita@yahoo.com</span>
+                <span class="contact__card-data">hailee@example.com</span>
             </div>
-
             <div class="contact__card">
                 <i class='bx bxl-linkedin contact__card-icon'></i>
                 <h3 class="contact__card-title">LinkedIn</h3>
-                <span class="contact__card-data">Ana-Maria Orita</span>
-            </div>
-
-            <div class="contact__card">
-                <i class='bx bx-book-open contact__card-icon'></i>
-                <h3 class="contact__card-title">HAL</h3>
-                <span class="contact__card-data">Research Profile</span>
+                <span class="contact__card-data">Hailee Keys</span>
             </div>
         </div>
     </div>
@@ -188,10 +279,28 @@
 </main>
 
 <footer class="footer">
-    <span class="footer__copy">
-        © 2026 Ana-Maria Orita — Academic Website
-    </span>
+    <span class="footer__copy">© 2026 Hailee Keys — Portfolio</span>
 </footer>
+
+<!--=============== JS Toggle Theme ===============-->
+<script>
+const themeButtonHeader = document.getElementById('theme-button');
+const themeButtonSkills = document.getElementById('theme-button-skills');
+const body = document.body;
+
+// Functie toggle tema
+function toggleTheme() {
+    body.classList.toggle('dark-theme');
+    // schimb icon/text butoane
+    const dark = body.classList.contains('dark-theme');
+    if(themeButtonHeader) themeButtonHeader.className = dark ? 'bx bx-sun change-theme change-theme-button' : 'bx bx-moon change-theme change-theme-button';
+    if(themeButtonSkills) themeButtonSkills.textContent = dark ? '☀️ Light Mode' : '🌙 Dark Mode';
+}
+
+// Evenimente click
+if(themeButtonHeader) themeButtonHeader.addEventListener('click', toggleTheme);
+if(themeButtonSkills) themeButtonSkills.addEventListener('click', toggleTheme);
+</script>
 
 </body>
 </html>
