@@ -232,12 +232,15 @@ sr.reveal(`.footer, footer__container`, {
   distance: "30px",
 });
 /*=============== TOGGLE TALKS & CONFERENCES ===============*/
-const toggleTitles = document.querySelectorAll('.toggle-title');
+document.addEventListener('DOMContentLoaded', () => {
+  const toggleTitles = document.querySelectorAll('.toggle-title');
 
-toggleTitles.forEach(title => {
-  title.addEventListener('click', () => {
-    const content = title.nextElementSibling;
-    content.style.display = content.style.display === 'block' ? 'none' : 'block';
+  toggleTitles.forEach(title => {
+    title.addEventListener('click', () => {
+      const content = title.nextElementSibling;
+      content.style.display = content.style.display === 'block' ? 'none' : 'block';
+    });
   });
 });
+
 
