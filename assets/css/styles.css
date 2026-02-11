@@ -479,55 +479,81 @@ body.light-theme {
 }
 
 /*=============== SKILLS ===============*/
+
+/* Container general */
 .skills__container {
-  row-gap: 2rem;
+  display: flex;
+  flex-wrap: wrap;         /* permite mai multe coloane/rânduri */
+  gap: 2rem;               /* spațiu între coloane */
   padding-top: 1rem;
+  justify-content: center; /* centrăm conținutul */
 }
 
+/* Fiecare box de skills */
 .skills__content {
   background-color: var(--container-color);
-  padding: 1.5rem;
+  padding: 2rem;           /* mai uniform */
   border-radius: 1.25rem;
+  flex: 1 1 400px;         /* ocupă minim 400px, se extinde dacă e nevoie */
+  max-width: 480px;        /* nu devine prea larg */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+/* Titlu box */
 .skills__title {
-  font-size: var(--normal-font-size);
+  font-size: var(--h3-font-size);
   font-weight: var(--font-medium);
   color: var(--first-color);
   text-align: center;
   margin-bottom: 1.5rem;
 }
 
+/* Container pentru itemele de skills */
 .skills__box {
   display: flex;
+  flex-wrap: wrap;          /* permite împărțirea pe mai multe rânduri */
+  gap: 1rem 2rem;           /* 1rem între rânduri, 2rem între coloane */
   justify-content: center;
-  column-gap: 2.5rem;
 }
 
-.skills__group {
-  display: grid;
-  align-content: flex-start;
-  row-gap: 1rem;
-}
-
+/* Fiecare skill individual */
 .skills__data {
+  flex: 1 1 45%;            /* două coloane pe desktop */
   display: flex;
-  column-gap: 0.5rem;
+  align-items: center;
+  gap: 0.5rem;              /* spațiu între icon și text */
+  margin-bottom: 0.5rem;    /* spațiu între rânduri */
 }
 
+/* Iconițe check */
 .skills .bxs-badge-check {
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: var(--first-color);
 }
 
+/* Numele skill-ului */
 .skills__name {
   font-size: var(--normal-font-size);
   font-weight: var(--font-medium);
-  line-height: 18px;
+  line-height: 1.3;
 }
 
+/* Nivel skill (dacă folosești) */
 .skills__level {
   font-size: var(--small-font-size);
+}
+
+/* Responsive: ecrane mici */
+@media screen and (max-width: 630px) {
+  .skills__data {
+    flex: 1 1 100%;        /* pe mobil, o coloană pe rând */
+  }
+
+  .skills__content {
+    padding: 1.5rem;
+  }
 }
 
 /*=============== SERVICES ===============*/
