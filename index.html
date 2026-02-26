@@ -180,61 +180,51 @@
 </section>
 
 
-   <section class="services section" id="talks">
-    <span class="section__subtitle">Dissemination</span>
-    <h2 class="section__title">Talks & Conferences</h2>
+   <section class="talks-section" id="talks">
+  <span class="section__subtitle">Dissemination</span>
+  <h2 class="section__title">Talks & Conferences</h2>
 
-    <div class="services__container container grid">
-
-        <!-- Invited Talk -->
-        <div class="services__card">
-            <h3 class="services__title toggle-title">Invited Talk </h3>
-             <div class="toggle-content">
-                <p> “The mathematical modeling of waves” ,“Unirea" National College, February 2026, Turnu Măgurele, Teleorman
-                </p>
-                <p> “Some remarks on high-order finite-differences schemes. Consequences on the observability
-                    of the wave equation.”  Journée de l'équipe Equations aux Dérivées Partielles et Analyse Numérique du Laboratoire 
-                    de Mathématiques Blaise Pascal, January 2026   <a href="\href{https://lmbp.uca.fr/seminaires/gt_edp.php/" target="_blank">link</a> Clermont Ferrand, France
-                </p>
-            </div>
-        </div>
-
-        <!-- Summer School -->
-        <div class="services__card">
-            <h3 class="services__title toggle-title">Summer Schools</h3>
-            <div class="toggle-content">
-                <p>
-                    9th Regional French-Romanian Summer School on Applied Mathematics, July 2024. 
-                    <a href="https://sites.google.com/site/marinliviu/regional-french-romanian-summer-school-on-applied-mathematics/9th-regional-fr-ro-summer-school-on-applied-mathematics-10-18-july-2024" target="_blank">link</a>. 
-                    Sinaia, Romania
-                </p>
-            </div>
-        </div>
-        
-        <!-- Conferences -->
-        <div class="services__card">
-            <h3 class="services__title toggle-title">Conferences</h3>
-            <div class="toggle-content">
-                <p>
-                    Journées Équations aux Dérivées Partielles Auvergne-Rhône-Alpes, 2025. 
-                    <a href="https://jeara2025.sciencesconf.org/" target="_blank">link</a>. Lyon, France
-                </p>
-            </div>
-        </div>
-
-        <!-- Scientific Events -->
-        <div class="services__card">
-            <h3 class="services__title toggle-title">Scientific Events</h3>
-            <div class="toggle-content">
-                <p>
-                    Journées Scientifiques de l’École Doctorale des Sciences Fondamentales
-                </p>
-            </div>
-        </div>
-
+  <div class="talks-cards grid">
+    <div class="talk-card" data-target="invited">
+      <h3>Invited Talk</h3>
     </div>
-</section> 
-   
+    <div class="talk-card" data-target="summer">
+      <h3>Summer Schools</h3>
+    </div>
+    <div class="talk-card" data-target="conferences">
+      <h3>Conferences</h3>
+    </div>
+    <div class="talk-card" data-target="events">
+      <h3>Scientific Events</h3>
+    </div>
+  </div>
+
+  <!-- Sections detail -->
+  <div class="talk-details" id="invited">
+    <h3>Invited Talks</h3>
+    <p>“The mathematical modeling of waves” - “Unirea" National College, February 2026, Turnu Măgurele</p>
+    <img src="invited1.jpg" alt="Invited Talk 1">
+    <p>“Some remarks on high-order finite-differences schemes...” - Clermont Ferrand, France</p>
+    <img src="invited2.jpg" alt="Invited Talk 2">
+  </div>
+
+  <div class="talk-details" id="summer">
+    <h3>Summer Schools</h3>
+    <p>9th Regional French-Romanian Summer School on Applied Mathematics, July 2024, Sinaia, Romania</p>
+    <img src="summer1.jpg" alt="Summer School 1">
+  </div>
+
+  <div class="talk-details" id="conferences">
+    <h3>Conferences</h3>
+    <p>Journées Équations aux Dérivées Partielles Auvergne-Rhône-Alpes, 2025, Lyon, France</p>
+    <img src="conf1.jpg" alt="Conference 1">
+  </div>
+
+  <div class="talk-details" id="events">
+    <h3>Scientific Events</h3>
+    <p>Journées Scientifiques de l’École Doctorale des Sciences Fondamentales</p>
+  </div>
+</section>
 <!--=============== CONTACT ===============-->
     <section class="contact section" id="contact"> <span class="section__subtitle">Get in Touch</span> 
     <h3 class="section__title">Contact Me</h3> <div class="contact__container container grid"> <!-- LEFT SIDE: Email + LinkedIn --> 
@@ -278,6 +268,7 @@
 
 </body>
 </html>
+
 
 
 
