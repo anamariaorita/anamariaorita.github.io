@@ -1344,3 +1344,11 @@ body.light-theme {
         width: 100%; /* 1 pe rând */
     }
 }
+.toggle-content {
+    display: none;  /* ascunde inițial */
+    margin-top: 1rem;
+}
+
+.services__title.toggle-title {
+    cursor: pointer; /* indică că se poate da click */
+}
