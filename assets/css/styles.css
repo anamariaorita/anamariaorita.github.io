@@ -1312,22 +1312,23 @@ body.light-theme {
   margin: 1rem 0;
   border-radius: 0.75rem;
 }
-/* Ascunde pozele conferințelor inițial */
-..conference-images {
-    display: flex;        /* flex permanent când are clasa show */
-    flex-wrap: wrap;      /* permite să se împartă pe mai multe rânduri */
-    gap: 10px;
+/* Ascunde inițial pozele */
+.conference-images {
+    display: none;      /* ascunde implicit */
     margin-top: 0.75rem;
-    justify-content: center; /* opțional, pentru centru */
+    gap: 10px;
 }
 
-.conference-images:not(.show) {
-    display: none;       /* ascunde când nu e activ */
+/* Când se arată pozele */
+.conference-images.show {
+    display: block;     /* pe desktop/laptop, pozele vor fi una sub alta */
 }
 
+/* Imagine individuală */
 .conference-img {
-    width: calc(33% - 10px); /* 3 pe rând pe desktop */
-    max-width: 300px;         
+    width: 100%;        /* ocupă tot rândul */
+    max-width: 400px;   /* opțional, să nu fie prea mari */
+    margin-bottom: 1rem;
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     cursor: pointer;
@@ -1338,9 +1339,23 @@ body.light-theme {
     transform: scale(1.05);
 }
 
-/* pe mobil */
+/* Pe mobil (<768px), folosim flex și wrap pentru layout mai compact */
 @media (max-width: 768px) {
+    .conference-images.show {
+        display: flex;       /* flex pe mobil */
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
     .conference-img {
-        width: 100%; /* o singură poză pe linie */
+        width: calc(50% - 10px);  /* 2 pe rând pe telefon/tablet */
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .conference-img {
+        width: 100%;       /* o poză pe linie pe telefoane foarte mici */
+        max-width: 100%;
     }
 }
