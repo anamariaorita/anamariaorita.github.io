@@ -237,15 +237,24 @@ document.addEventListener('DOMContentLoaded', () => {
   const toggleTitles = document.querySelectorAll('.toggle-title');
 
   toggleTitles.forEach(title => {
-    const toggleFunction = () => {
+    title.addEventListener('click', () => {
       const content = title.nextElementSibling;
       content.style.display = content.style.display === 'block' ? 'none' : 'block';
-    };
-
-    title.addEventListener('click', toggleFunction);       // desktop
-    title.addEventListener('touchstart', toggleFunction);  // mobil / tablet
+    });
   });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const toggleTitles = document.querySelectorAll('.toggle-title');
+
+  toggleTitles.forEach(title => {
+    title.addEventListener('click', () => {
+      const content = title.nextElementSibling;
+      content.style.display = content.style.display === 'block' ? 'none' : 'block';
+    });
+  });
+});
+
 
 
 
