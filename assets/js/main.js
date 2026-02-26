@@ -231,22 +231,7 @@ sr.reveal(`.footer, footer__container`, {
   origin: "bottom",
   distance: "30px",
 });
-const cards = document.querySelectorAll('.talk-card');
-const details = document.querySelectorAll('.talk-details');
-
-cards.forEach(card => {
-  card.addEventListener('click', () => {
-    const target = card.dataset.target;
-
-    details.forEach(d => {
-      if(d.id === target){
-        d.style.display = d.style.display === 'block' ? 'none' : 'block';
-      } else {
-        d.style.display = 'none';
-      }
-    });
-  });
-}); 
+ 
 /*=============== TOGGLE TALKS & CONFERENCES ===============*/
 document.addEventListener('DOMContentLoaded', () => {
   const toggleTitles = document.querySelectorAll('.toggle-title');
@@ -258,6 +243,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
 
 
 
