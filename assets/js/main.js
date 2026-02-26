@@ -234,6 +234,9 @@ sr.reveal(`.footer, footer__container`, {
  
 /*=============== TOGGLE TALKS & CONFERENCES ===============*/
 document.addEventListener('DOMContentLoaded', () => {
+  // -----------------------------
+  // Toggle pentru secțiuni mari
+  // -----------------------------
   const toggleTitles = document.querySelectorAll('.toggle-title');
 
   toggleTitles.forEach(title => {
@@ -244,10 +247,26 @@ document.addEventListener('DOMContentLoaded', () => {
       content.style.display = content.style.display === 'block' ? 'none' : 'block';
     };
 
-    title.addEventListener('click', toggleFunction);      // desktop
-    title.addEventListener('touchstart', toggleFunction); // mobil / tablet
+    title.addEventListener('click', toggleFunction);      
+    title.addEventListener('touchstart', toggleFunction);
+  });
+
+  // -----------------------------
+  // Toggle pentru pozele fiecărei conferințe
+  // -----------------------------
+  const conferenceTitles = document.querySelectorAll('.conference-title');
+
+  conferenceTitles.forEach(title => {
+    title.addEventListener('click', () => {
+      const imagesDiv = title.nextElementSibling.nextElementSibling; 
+      // <p> locație -> următorul div sunt pozele
+      if (imagesDiv) {
+        imagesDiv.classList.toggle('show');
+      }
+    });
   });
 });
+
 
 
 
