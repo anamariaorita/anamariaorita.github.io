@@ -1312,24 +1312,21 @@ body.light-theme {
   margin: 1rem 0;
   border-radius: 0.75rem;
 }
-/* Container poze */
 .conference-images {
     display: flex;
-    flex-direction: column; /* poze una sub alta */
-    gap: 10px;              /* spațiu între poze */
+    flex-wrap: wrap;
+    gap: 10px;
     margin-top: 0.5rem;
-    align-items: center;    /* pozele centrate */
+    justify-content: center; /* pozele centrate pe mobil */
 }
 
-/* Fiecare imagine */
 .conference-img {
-    display: block;     /* obligatoriu pentru block images */
-    width: 100%;        /* dimensiune uniformă */
-    max-width: 600px;
-    height: 300px;
-    object-fit: cover;
+    flex: 1 1 auto;   /* se pot micșora sau mări proporțional */
+    max-width: 100%;  /* nu depășesc containerul */
+    height: auto;     /* păstrează proporțiile originale */
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    object-fit: contain; /* se adaptează în container fără să se taie */
 }
 
 /* Lightbox */
