@@ -1312,23 +1312,32 @@ body.light-theme {
   margin: 1rem 0;
   border-radius: 0.75rem;
 }
-.conference-images {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 0.5rem;
-    justify-content: center; /* pozele centrate pe mobil */
-}
 
 .conference-img {
-    flex: 1 1 auto;   /* se pot micșora sau mări proporțional */
-    max-width: 100%;  /* nu depășesc containerul */
-    height: auto;     /* păstrează proporțiile originale */
+    width: 100px; /* pozele mici pe pagină */
+    height: auto;
+    margin: 5px;
+    cursor: pointer;
     border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    object-fit: contain; /* se adaptează în container fără să se taie */
 }
 
+/* Lightbox */
+#lightbox {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+#lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+}
 /* Lightbox */
 #lightbox {
     display: none;
