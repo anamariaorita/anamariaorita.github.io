@@ -1313,21 +1313,21 @@ body.light-theme {
   border-radius: 0.75rem;
 }
 /* Ascunde inițial pozele */
+/* Implicit: desktop / laptop */
 .conference-images {
-    display: none;      /* ascunde implicit */
+    display: none;   /* ascuns inițial */
     margin-top: 0.75rem;
-    gap: 10px;
 }
 
-/* Când se arată pozele */
+/* Când pozele sunt deschise */
 .conference-images.show {
-    display: block;     /* pe desktop/laptop, pozele vor fi una sub alta */
+    display: block;   /* pe desktop, pozele sunt una sub alta */
 }
 
 /* Imagine individuală */
 .conference-img {
-    width: 100%;        /* ocupă tot rândul */
-    max-width: 400px;   /* opțional, să nu fie prea mari */
+    width: 100%;      /* ocupă tot rândul */
+    max-width: 400px;
     margin-bottom: 1rem;
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
@@ -1339,23 +1339,23 @@ body.light-theme {
     transform: scale(1.05);
 }
 
-/* Pe mobil (<768px), folosim flex și wrap pentru layout mai compact */
+/* Pe mobil (<768px) folosim flex pentru layout compact */
 @media (max-width: 768px) {
     .conference-images.show {
-        display: flex;       /* flex pe mobil */
+        display: flex;
         flex-wrap: wrap;
         justify-content: center;
     }
 
     .conference-img {
-        width: calc(50% - 10px);  /* 2 pe rând pe telefon/tablet */
+        width: calc(50% - 10px); /* 2 pe rând */
         max-width: 200px;
     }
 }
 
 @media (max-width: 480px) {
     .conference-img {
-        width: 100%;       /* o poză pe linie pe telefoane foarte mici */
+        width: 100%;       /* 1 poză pe rând pe telefoane mici */
         max-width: 100%;
     }
 }
