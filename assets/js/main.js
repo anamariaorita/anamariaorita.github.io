@@ -244,19 +244,12 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-  const toggleTitles = document.querySelectorAll('.toggle-title');
-
-  toggleTitles.forEach(title => {
+document.querySelectorAll('.toggle-title').forEach(title => {
     title.addEventListener('click', () => {
-      const content = title.nextElementSibling;
-      content.style.display = content.style.display === 'block' ? 'none' : 'block';
+        const content = title.nextElementSibling;
+        content.style.display = content.style.display === 'block' ? 'none' : 'block';
     });
-  });
 });
-
-
-
 
 
 
