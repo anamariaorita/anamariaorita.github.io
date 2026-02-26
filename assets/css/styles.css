@@ -1323,12 +1323,13 @@ body.light-theme {
 
 /* Fiecare imagine */
 .conference-img {
-    width: 100%;         /* ocupa tot containerul */
-    max-width: 600px;    /* dimensiune maximă pe desktop */
-    height: 300px;       /* înălțime fixă */
+    display: block;     /* obligatoriu pentru block images */
+    width: 100%;        /* dimensiune uniformă */
+    max-width: 600px;
+    height: 300px;
+    object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    object-fit: cover;   /* taie pozele proporțional, fără deformare */
 }
 
 /* Lightbox */
