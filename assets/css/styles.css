@@ -1314,48 +1314,34 @@ body.light-theme {
 }
 /* Ascunde inițial pozele */
 /* Implicit: desktop / laptop */
+/* Implicit pe desktop: imagini una sub alta */
 .conference-images {
-    display: none;   /* ascuns inițial */
-    margin-top: 0.75rem;
+    display: block;       /* una sub alta */
 }
 
-/* Când pozele sunt deschise */
-.conference-images.show {
-    display: block;   /* pe desktop, pozele sunt una sub alta */
-}
-
-/* Imagine individuală */
-.conference-img {
-    width: 100%;      /* ocupă tot rândul */
-    max-width: 400px;
+.conference-images .conference-img {
+    display: block;       /* fiecare imagine pe rând */
+    width: 100%;
+    max-width: 400px;     /* sau ce dimensiune vrei */
     margin-bottom: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    cursor: pointer;
-    transition: transform 0.2s;
 }
 
-.conference-img:hover {
-    transform: scale(1.05);
-}
-
-/* Pe mobil (<768px) folosim flex pentru layout compact */
+/* Pe mobil (<768px) putem avea două pe rând */
 @media (max-width: 768px) {
-    .conference-images.show {
+    .conference-images {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        gap: 10px;
     }
-
-    .conference-img {
-        width: calc(50% - 10px); /* 2 pe rând */
-        max-width: 200px;
+    .conference-images .conference-img {
+        width: calc(50% - 10px); /* două pe rând */
+        max-width: none;
     }
 }
 
+/* Pe telefoane mici: o poză pe rând */
 @media (max-width: 480px) {
-    .conference-img {
-        width: 100%;       /* 1 poză pe rând pe telefoane mici */
-        max-width: 100%;
+    .conference-images .conference-img {
+        width: 100%;
     }
 }
