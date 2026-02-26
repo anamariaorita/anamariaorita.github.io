@@ -1313,16 +1313,21 @@ body.light-theme {
   border-radius: 0.75rem;
 }
 /* Ascunde pozele conferințelor inițial */
-.conference-images {
-    display: none;
-    flex-wrap: wrap;
+..conference-images {
+    display: flex;        /* flex permanent când are clasa show */
+    flex-wrap: wrap;      /* permite să se împartă pe mai multe rânduri */
     gap: 10px;
     margin-top: 0.75rem;
+    justify-content: center; /* opțional, pentru centru */
+}
+
+.conference-images:not(.show) {
+    display: none;       /* ascunde când nu e activ */
 }
 
 .conference-img {
-    width: 100%;
-    max-width: 300px;
+    width: calc(33% - 10px); /* 3 pe rând pe desktop */
+    max-width: 300px;         
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     cursor: pointer;
@@ -1333,31 +1338,9 @@ body.light-theme {
     transform: scale(1.05);
 }
 
-/* Când se deschid pozele */
-.conference-images.show {
-    display: flex;
-}
-
-/* Lightbox */
-#lightbox {
-    display: none;
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0,0,0,0.8);
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-}
-
-#lightbox img {
-    max-width: 90%;
-    max-height: 90%;
-    border-radius: 8px;
-}
-
-@media (max-width: 480px) {
+/* pe mobil */
+@media (max-width: 768px) {
     .conference-img {
-        width: 100%; /* 1 poză pe linie */
+        width: 100%; /* o singură poză pe linie */
     }
 }
