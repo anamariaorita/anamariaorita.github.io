@@ -1313,15 +1313,28 @@ body.light-theme {
   border-radius: 0.75rem;
 }
 .conference-images {
-    display: flex;           /* pozele stau pe orizontală */
-    flex-wrap: wrap;         /* trec pe linia următoare dacă nu încap */
-    gap: 10px;               /* spațiu între poze */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
     margin-top: 0.5rem;
 }
 
 .conference-img {
-    width: calc(33.33% - 10px);  /* 3 poze pe linie, cu gap */
+    width: calc(33.33% - 10px); /* desktop: 3 pe rând */
     height: auto;
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* pe ecrane mici (mobil) */
+@media (max-width: 768px) {
+    .conference-img {
+        width: calc(50% - 10px); /* 2 pe rând */
+    }
+}
+
+@media (max-width: 480px) {
+    .conference-img {
+        width: 100%; /* 1 pe rând */
+    }
 }
