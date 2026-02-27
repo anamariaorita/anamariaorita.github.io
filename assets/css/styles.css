@@ -1359,8 +1359,12 @@ body.light-theme {
     text-decoration: underline;
 }
 
+#publications.section {
+    padding: 4.5rem 1rem 1rem; /* top 4.5rem, lateral 1rem, bottom 1rem */
+}
 #publications .work__card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px hsla(var(--second-hue), 48%, 8%, 0.25);
     transition: transform 0.3s, box-shadow 0.3s;
 }
+
