@@ -238,16 +238,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
   toggleTitles.forEach(title => {
     const toggleFunction = (e) => {
-      e.preventDefault(); // previne scroll sau select accidental pe mobil
-      const content = title.nextElementSibling;
+      e.preventDefault();
+
+      const content = title.parentElement.querySelector('.toggle-content');
       if (!content) return;
-      content.style.display = content.style.display === 'block' ? 'none' : 'block';
+
+      content.style.display =
+        content.style.display === 'block' ? 'none' : 'block';
     };
 
-    title.addEventListener('click', toggleFunction);      // desktop
-    title.addEventListener('touchstart', toggleFunction); // mobil / tablet
+    title.addEventListener('click', toggleFunction);
   });
 });
+
 
 
 
