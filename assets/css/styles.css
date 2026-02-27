@@ -209,7 +209,7 @@ body.light-theme {
 }
 
 .main {
-  overflow: hidden;
+  overflow: visible;
 }
 
 .section {
