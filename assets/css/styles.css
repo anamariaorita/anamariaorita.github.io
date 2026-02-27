@@ -1345,3 +1345,20 @@ body.light-theme {
         width: 100%;
     }
 }
+
+/* Ascunde imaginile inițial */
+.conference-images {
+    display: none;
+    margin-top: 1rem;
+}
+
+/* Mic efect de hover pe titlu */
+.conference-title {
+    cursor: pointer;
+    color: var(--first-color);
+    transition: 0.3s;
+}
+
+.conference-title:hover {
+    text-decoration: underline;
+}
