@@ -1346,11 +1346,7 @@ body.light-theme {
     }
 }
 
-/* Ascunde imaginile inițial */
-.conference-images {
-    display: none;
-    margin-top: 1rem;
-}
+
 
 /* Mic efect de hover pe titlu */
 .conference-title {
