@@ -233,7 +233,7 @@ sr.reveal(`.footer, footer__container`, {
 });
  
 /*=============== TOGGLE TALKS & CONFERENCES ===============*/
-/*=document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
   const toggleTitles = document.querySelectorAll('.toggle-title');
 
   toggleTitles.forEach(title => {
@@ -277,7 +277,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 });
-
 
 
 
