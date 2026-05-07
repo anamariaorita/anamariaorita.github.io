@@ -284,7 +284,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
+document.addEventListener('DOMContentLoaded', () => {
 
+  // selecteaza doar butoanele Photos
+  const photoButtons = document.querySelectorAll('.photos-btn');
+
+  photoButtons.forEach(button => {
+
+    button.addEventListener('click', () => {
+
+      // urmatorul div dupa Photos
+      const content = button.nextElementSibling;
+
+      // verifica daca exista
+      if (!content || !content.classList.contains('toggle-content')) return;
+
+      // afisare / ascundere
+      if (content.style.display === 'block') {
+        content.style.display = 'none';
+      } else {
+        content.style.display = 'block';
+      }
+
+    });
+
+  });
+
+});
 
 
 
