@@ -279,21 +279,5 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-function togglePhotos(button) {
-
-    // urmatorul element dupa buton
-    const gallery = button.nextElementSibling;
-
-    // daca e deschis -> inchide
-    if (gallery.style.display === "block") {
-        gallery.style.display = "none";
-    }
-
-    // altfel -> deschide
-    else {
-        gallery.style.display = "block";
-    }
-}
-
 
 
