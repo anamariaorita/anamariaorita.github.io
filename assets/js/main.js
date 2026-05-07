@@ -233,7 +233,7 @@ sr.reveal(`.footer, footer__container`, {
 });
  
 /*=============== TOGGLE TALKS & CONFERENCES ===============*/
-document.addEventListener('DOMContentLoaded', () => {
+/*=document.addEventListener('DOMContentLoaded', () => {
   const toggleTitles = document.querySelectorAll('.toggle-title');
 
   toggleTitles.forEach(title => {
@@ -253,7 +253,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+/*=============== TOGGLE PHOTOS ===============*/
 
+document.addEventListener('DOMContentLoaded', () => {
+
+  const toggleTitles = document.querySelectorAll('.toggle-title');
+
+  toggleTitles.forEach(title => {
+
+    title.addEventListener('click', (e) => {
+
+      e.preventDefault();
+
+      // urmatorul element dupa Photos
+      const content = title.nextElementSibling;
+
+      // verifica daca exista si are clasa toggle-content
+      if (!content || !content.classList.contains('toggle-content')) return;
+
+      // toggle show/hide
+      if (content.style.display === 'block') {
+        content.style.display = 'none';
+      } else {
+        content.style.display = 'block';
+      }
+
+    });
+
+  });
+
+});
 
 
 
