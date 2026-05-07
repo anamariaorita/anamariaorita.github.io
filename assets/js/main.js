@@ -253,35 +253,28 @@ sr.reveal(`.footer, footer__container`, {
 
 
 
-/*=============== TOGGLE PHOTOS ===============*/
 
+/*=============== PHOTOS TOGGLE ===============*/
 
+document.addEventListener('DOMContentLoaded', function () {
 
-document.addEventListener('DOMContentLoaded', () => {
+    const photoButtons = document.querySelectorAll('.photos-btn');
 
-  // selecteaza doar butoanele Photos
-  const photoButtons = document.querySelectorAll('.photos-btn');
+    photoButtons.forEach(function(button) {
 
-  photoButtons.forEach(button => {
+        button.addEventListener('click', function() {
 
-    button.addEventListener('click', () => {
+            const gallery = button.nextElementSibling;
 
-      // urmatorul div dupa Photos
-      const content = button.nextElementSibling;
+            if (gallery.classList.contains('show-gallery')) {
+                gallery.classList.remove('show-gallery');
+            } else {
+                gallery.classList.add('show-gallery');
+            }
 
-      // verifica daca exista
-      if (!content || !content.classList.contains('toggle-content')) return;
-
-      // afisare / ascundere
-      if (content.style.display === 'block') {
-        content.style.display = 'none';
-      } else {
-        content.style.display = 'block';
-      }
+        });
 
     });
-
-  });
 
 });
 
