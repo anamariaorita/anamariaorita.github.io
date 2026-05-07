@@ -1368,6 +1368,17 @@ body.light-theme {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
+/* galerie ascunsa initial */
+.toggle-content{
+    display: none;
+}
+
+/* galerie afisata */
+.show-gallery{
+    display: block;
+}
+
+/* buton photos */
 .photos-btn{
     cursor: pointer;
     color: var(--first-color);
@@ -1379,9 +1390,3 @@ body.light-theme {
 .photos-btn:hover{
     text-decoration: underline;
 }
-
-/* ascunde pozele initial */
-.toggle-content{
-    display: none;
-}
-
