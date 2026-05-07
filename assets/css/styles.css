@@ -1358,6 +1358,9 @@ body.light-theme {
 .conference-title:hover {
     text-decoration: underline;
 }
+.conference-item h4 {
+    color: var(--first-color);
+}
 
 #publications.section {
     padding: 4.5rem 1rem 1rem; /* top 4.5rem, lateral 1rem, bottom 1rem */
