@@ -1368,3 +1368,20 @@ body.light-theme {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
+.photos-btn{
+    cursor: pointer;
+    color: var(--first-color);
+    font-weight: 500;
+    margin-top: .5rem;
+    display: inline-block;
+}
+
+.photos-btn:hover{
+    text-decoration: underline;
+}
+
+/* ascunde pozele initial */
+.toggle-content{
+    display: none;
+}
+
