@@ -1432,3 +1432,95 @@ body.light-theme {
 .painting__img:hover{
     transform:scale(1.03);
 }
+
+
+
+
+
+/* asta pt paintings pagina   nou nou*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.paintings__container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+    gap:2.5rem;
+    margin-top:3rem;
+}
+
+.painting__card{
+    background:var(--container-color);
+    border-radius:1.5rem;
+    overflow:hidden;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.painting__card:hover{
+    transform:translateY(-8px);
+}
+
+.painting__img{
+    width:100%;
+    height:420px;
+    object-fit:cover;
+    cursor:pointer;
+}
+
+.painting__content{
+    padding:1.5rem;
+}
+
+.painting__title{
+    font-size:1.3rem;
+    margin-bottom:.4rem;
+}
+
+.painting__medium,
+.painting__dimensions,
+.painting__year{
+    color:var(--text-color);
+    margin-bottom:.3rem;
+}
+
+.details-btn{
+    margin-top:1rem;
+    background:var(--first-color);
+    color:#fff;
+    border:none;
+    padding:.8rem 1.4rem;
+    border-radius:.7rem;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.details-btn:hover{
+    opacity:.9;
+}
+
+.painting__details{
+    display:none;
+    margin-top:1.2rem;
+    border-top:1px solid rgba(0,0,0,.1);
+    padding-top:1rem;
+    line-height:1.7;
+}
+
+.painting__details.show{
+    display:block;
+}
