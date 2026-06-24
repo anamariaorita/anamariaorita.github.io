@@ -278,5 +278,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 
+function toggleDetails(button){
 
+    const details = button.nextElementSibling;
+
+    details.classList.toggle("show");
+
+    if(details.classList.contains("show")){
+        button.innerHTML = "Hide details";
+    }else{
+        button.innerHTML = "Read the story";
+    }
+
+}
 
