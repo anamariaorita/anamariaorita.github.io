@@ -3,39 +3,194 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Paintings</title>
+    <title>Art Gallery | Ana-Maria Oriță</title>
 
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
 </head>
 
 <body>
 
 <section class="section">
 
-    <h2 class="section__title">My Paintings</h2>
-    <span class="section__subtitle">
-        A selection of my artworks.
-    </span>
+    <span class="section__subtitle">Beyond Mathematics</span>
+
+    <h2 class="section__title">Art Gallery</h2>
+
+    <p class="about__description" style="max-width:900px;margin:auto;text-align:center;">
+        Painting allows me to explore creativity beyond mathematics.
+        Each work reflects a moment, an emotion or an idea captured through
+        colors and composition.
+    </p>
+
+    <br><br>
 
     <div class="paintings__container container">
 
-        <img src="assets/img/Lointain2.jpeg" class="painting__img">
+        <!-- ================= Painting 1 ================= -->
 
-        <img src="assets/img/painting2.jpg" class="painting__img">
+        <div class="painting__card">
 
-        <img src="assets/img/painting3.jpg" class="painting__img">
+            <img src="assets/img/Lointain2.jpeg"
+                 class="painting__img"
+                 alt="Lointain">
 
-        <img src="assets/img/painting4.jpg" class="painting__img">
+            <div class="painting__content">
+
+                <h3 class="painting__title">
+                    Lointain
+                </h3>
+
+                <p class="painting__medium">
+                    Acrylic on canvas
+                </p>
+
+                <p class="painting__dimensions">
+                    50 × 70 cm
+                </p>
+
+                <p class="painting__year">
+                    2026
+                </p>
+
+                <button class="details-btn"
+                        onclick="toggleDetails(this)">
+                    Read the story
+                </button>
+
+                <div class="painting__details">
+
+                    <p>
+                        Lorem ipsum dolor sit amet.
+                        Here you can describe the inspiration,
+                        the symbolism, the colors you chose,
+                        the emotions you wanted to express,
+                        or the context in which this painting
+                        was created.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- ================= Painting 2 ================= -->
+
+        <div class="painting__card">
+
+            <img src="assets/img/painting2.jpg"
+                 class="painting__img">
+
+            <div class="painting__content">
+
+                <h3 class="painting__title">
+                    Autumn Light
+                </h3>
+
+                <p class="painting__medium">
+                    Oil on canvas
+                </p>
+
+                <p class="painting__dimensions">
+                    60 × 80 cm
+                </p>
+
+                <p class="painting__year">
+                    2025
+                </p>
+
+                <button class="details-btn"
+                        onclick="toggleDetails(this)">
+                    Read the story
+                </button>
+
+                <div class="painting__details">
+
+                    <p>
+                        Description...
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- ================= Painting 3 ================= -->
+
+        <div class="painting__card">
+
+            <img src="assets/img/painting3.jpg"
+                 class="painting__img">
+
+            <div class="painting__content">
+
+                <h3 class="painting__title">
+                    Blue Silence
+                </h3>
+
+                <p class="painting__medium">
+                    Acrylic
+                </p>
+
+                <p class="painting__dimensions">
+                    40 × 60 cm
+                </p>
+
+                <p class="painting__year">
+                    2024
+                </p>
+
+                <button class="details-btn"
+                        onclick="toggleDetails(this)">
+                    Read the story
+                </button>
+
+                <div class="painting__details">
+
+                    <p>
+                        Description...
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
 
     </div>
 
     <br><br>
 
-    <a href="index.html" class="button">
-        ← Back to Home
-    </a>
+    <div style="text-align:center;">
+
+        <a href="index.html" class="button">
+            <i class='bx bx-arrow-back'></i>
+            Back to Home
+        </a>
+
+    </div>
 
 </section>
+
+<script>
+
+function toggleDetails(button){
+
+    const details = button.nextElementSibling;
+
+    details.classList.toggle("show");
+
+    if(details.classList.contains("show")){
+        button.innerHTML = "Hide details";
+    }else{
+        button.innerHTML = "Read the story";
+    }
+
+}
+
+</script>
 
 </body>
 </html>
