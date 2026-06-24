@@ -1412,3 +1412,23 @@ body.light-theme {
     transform: translateY(-3px);
     transition: .3s;
 }
+
+
+/* asta pt paintings pagina */
+
+.paintings__container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:2rem;
+}
+
+.painting__img{
+    width:100%;
+    border-radius:1rem;
+    transition:.3s;
+    cursor:pointer;
+}
+
+.painting__img:hover{
+    transform:scale(1.03);
+}
