@@ -1401,3 +1401,14 @@ body.light-theme {
 .photos-btn:hover{
     text-decoration: underline;
 }
+/* pt picturi*/ 
+.about__link{
+    color: inherit;
+    text-decoration: none;
+    display: block;
+}
+
+.about__link:hover{
+    transform: translateY(-3px);
+    transition: .3s;
+}
